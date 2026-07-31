@@ -6,21 +6,19 @@ import random
 from streamlit_option_menu import option_menu
 
 st.set_page_config(
-    page_title="Pensamiento Computacional",
+    page_title="Taller Python",
     page_icon="💻",
     layout="wide"
 )
 
-#st.title("Pensamiento Computacional")
-
-st.sidebar.title("Pensamiento Computacional")
+st.sidebar.title("Taller de Python Básico para Humanidades")
 
 with st.sidebar:
-    opciones = option_menu("Temas de clase: ",["Introducción","Mi primer código en Python", 
-            "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] , 
-        icons=['0-circle','1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
-               'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=1)
+    opciones = option_menu("Temas de clase: ",["Introducción","Primeros pasos en Python", 
+            "Cadenas de caracteres", "Listas", "Objetos y atributos", "Operadores", "Estructuras selectivas", 
+            "Bucles", "Funciones"] , 
+        icons=['0-circle','1-circle', 'alphabet', 'list', '4-circle', 'calculator', 'braces', 
+               'collection', '9-circle'], menu_icon="filetype-py", default_index=1)
 
 if opciones == "Introducción":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
@@ -217,7 +215,7 @@ if opciones == "Introducción":
     # Insertar un video explicativo de los entornos: VSC y Jupyter
         st.video("https://www.youtube.com/watch?v=IVMNhciviwc")
 
-elif opciones == "Mi primer código en Python":
+elif opciones == "Primeros pasos en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
     
     st.divider() ## Separador
@@ -368,94 +366,7 @@ elif opciones == "Mi primer código en Python":
                     """, language="python")
             show_info()
             
-if opciones == "Variables":
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">🧩 Variables en Python</h2>', unsafe_allow_html=True)
-    # Explicación
-    st.write("""
-    En Python, una **variable** es un espacio donde almacenamos información (un valor) para poder usarla después en nuestro programa.
-    Para asignar un valor a una variable utilizamos el símbolo `=`:
-    `numero = 14`
-    En este caso, la variable `numero` guarda el valor `14`.
-
-    ### 📌 Reglas para nombrar variables
-    - Pueden contener letras, números y guiones bajos (`_`).  
-    - **No pueden comenzar con un número**.  
-    - **No pueden tener espacios**.  
-    - No deben usar **caracteres especiales** (como `@`, `#`, `!`, etc.).  
-    - No pueden ser **palabras reservadas de Python** (como `if`, `for`, `while`, etc.).  
-
-    Puedes revisar la lista completa aquí: [Palabras reservadas en Python](https://www.w3schools.com/python/python_ref_keywords.asp)
-    """, unsafe_allow_html=True)
-
-    # Ejemplos de creación de variables
-    st.markdown(f'<h3 style="font-size: 28px; text-align: center; color: #4E8A4E">Ejemplos de variables</h3>', unsafe_allow_html=True)
-    
-    st.markdown("""
-    Explora cómo funcionan las variables en Python. Puedes escribir valores y ver cómo cambian.
-    """)
-    
-    # Input interactivo
-    nombre_variable = st.text_input("Escribe un nombre para tu variable:", value="animal")
-    valor_variable = st.text_input("Asigna un valor a tu variable:", value="perro")
-    
-    # Mostrar resultado dinámico
-    if nombre_variable:
-        st.markdown("### Resultado")
-        st.code(f"{nombre_variable} = '{valor_variable}'\nprint({nombre_variable})", language="python")
-        st.write("Salida:")
-        st.write(valor_variable)
-    
-    st.markdown("---")
-    
-    # Explicación de reasignación
-    st.markdown("### 🔁 Reasignación de variables")
-    
-    valor1 = st.text_input("Primer valor de la variable:", value="guau", key="v1")
-    valor2 = st.text_input("Nuevo valor de la variable:", value="sonido del perro", key="v2")
-    
-    st.code(f"""
-    perro = "{valor1}"
-    print(perro)
-    
-    perro = "{valor2}"
-    print(perro)
-    """, language="python")
-    
-    st.write("Salida:")
-    st.write(valor1)
-    st.write(valor2)
-    
-    st.markdown("""
-    💡 **Observa:** la variable guarda siempre el **último valor asignado**.
-    """)
-    
-    st.markdown("---")
-    
-    # Simulación de error
-    st.markdown("### ⚠️ Error común")
-    
-    st.markdown("""
-    Si intentas usar una variable que no ha sido definida, obtendrás un error:
-    """)
-    
-    st.code("""
-    print(gato)
-    """, language="python")
-    
-    st.error("NameError: name 'gato' is not defined")
-    
-    st.markdown("""
-    💡 **Recuerda:** primero debes crear la variable antes de usarla.
-    """)
-    
-    # VIDEO
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Variables </h2>', unsafe_allow_html=True)
-    col25, col26, col27 = st.columns([1,1.5,1])
-    with col26:
-    # Insertar un video explicativo
-        st.video("https://youtu.be/wDqPp41z90E")
-
-if opciones == "Tipos de datos":
+if opciones == "Objetos y atributos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Tipos de datos en Python</h2>', unsafe_allow_html=True)
 
         # Crear el gráfico
@@ -534,7 +445,7 @@ if opciones == "Tipos de datos":
             st.write("Tipo de dato:", type(valor))
             st.write("Valor:", valor)
 
-if opciones == "Operadores aritméticos":
+if opciones == "Operadores":
     st.markdown('<h2 style="font-size: 42px; text-align: center;">🧮 Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
 
     # Explicación
@@ -595,6 +506,87 @@ if opciones == "Operadores aritméticos":
         resultado = num1 ** num2
 
     st.success(f"Resultado: {resultado}")
+
+
+     st.markdown("---")
+    
+    # 🔹 Operadores comparativos
+    st.markdown('<h3 style="text-align: center;">🔍 Operadores comparativos</h3>', unsafe_allow_html=True)
+    
+    operadores_comparativos = {
+        "Operador": ["==", "!=", ">", "<", ">=", "<="],
+        "Descripción": [
+            "Igual a",
+            "Distinto de",
+            "Mayor que",
+            "Menor que",
+            "Mayor o igual que",
+            "Menor o igual que"
+        ],
+        "Ejemplo": [
+            "5 == 5 → True",
+            "5 != 3 → True",
+            "7 > 3 → True",
+            "3 < 7 → True",
+            "3 >= 5 → False",
+            "3 <= 5 → True"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(operadores_comparativos), use_container_width=True)
+    
+    st.markdown("---")
+    
+    # 🔹 Operadores de pertenencia
+    st.markdown('<h3 style="text-align: center;">📦 Operadores de pertenencia</h3>', unsafe_allow_html=True)
+    
+    operadores_pertenencia = {
+        "Operador": ["in", "not in"],
+        "Descripción": [
+            "Verifica si un elemento está dentro de una secuencia",
+            "Verifica si un elemento no está dentro de una secuencia"
+        ],
+        "Ejemplo": [
+            "'a' in 'manzana' → True",
+            "'b' not in 'manzana' → True"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(operadores_pertenencia), use_container_width=True)
+    
+    st.markdown("---")
+    
+    # 🔹 Operadores lógicos
+    st.markdown('<h3 style="text-align: center;">🧠 Operadores lógicos</h3>', unsafe_allow_html=True)
+    
+    operadores_logicos = {
+        "Operador": ["and", "or", "not"],
+        "Descripción": [
+            "True si ambas condiciones son verdaderas",
+            "True si al menos una condición es verdadera",
+            "Invierte el valor lógico"
+        ],
+        "Ejemplo": [
+            "(5 > 3) and (7 > 5) → True",
+            "(5 > 3) or (7 < 5) → True",
+            "not (5 > 3) → False"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(operadores_logicos), use_container_width=True)
+    
+    st.markdown("---")
+    
+    # 🔹 Mini interacción
+    st.markdown("### ⚙️ Prueba tú mismo")
+    
+    a = st.number_input("Valor de a:", value=5)
+    b = st.number_input("Valor de b:", value=3)
+    
+    st.write("a > b:", a > b)
+    st.write("a == b:", a == b)
+    st.write("a < b:", a < b)
+    st.write("(a > b) and (b > 0):", (a > b) and (b > 0))
 
 if opciones == "Cadena de caracteres":
     st.markdown('<h2 style="font-size: 42px; text-align: center;">🔤 Cadena de caracteres (str)</h2>', unsafe_allow_html=True)
@@ -746,104 +738,7 @@ if opciones == "Listas":
     💡 **Observa:** las listas son **mutables**, por lo que pueden cambiar durante la ejecución del programa.
     """)
 
-
-if opciones == "Expresiones booleanas":
-    st.markdown('<h2 style="font-size: 42px; text-align: center;">⚖️ Expresiones booleanas en Python</h2>', unsafe_allow_html=True)
-
-    # Explicación
-    st.markdown("""
-    Las **expresiones booleanas** son aquellas que solo pueden tener dos valores:  
-    <b>True</b> (verdadero) o <b>False</b> (falso).
-    
-    Se utilizan principalmente en **condiciones y comparaciones** para tomar decisiones en un programa.
-    
-    En Python, estas expresiones se construyen usando:
-    - Operadores **comparativos**
-    - Operadores de **pertenencia**
-    - Operadores **lógicos**
-    """, unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
-    # 🔹 Operadores comparativos
-    st.markdown('<h3 style="text-align: center;">🔍 Operadores comparativos</h3>', unsafe_allow_html=True)
-    
-    operadores_comparativos = {
-        "Operador": ["==", "!=", ">", "<", ">=", "<="],
-        "Descripción": [
-            "Igual a",
-            "Distinto de",
-            "Mayor que",
-            "Menor que",
-            "Mayor o igual que",
-            "Menor o igual que"
-        ],
-        "Ejemplo": [
-            "5 == 5 → True",
-            "5 != 3 → True",
-            "7 > 3 → True",
-            "3 < 7 → True",
-            "3 >= 5 → False",
-            "3 <= 5 → True"
-        ]
-    }
-    
-    st.dataframe(pd.DataFrame(operadores_comparativos), use_container_width=True)
-    
-    st.markdown("---")
-    
-    # 🔹 Operadores de pertenencia
-    st.markdown('<h3 style="text-align: center;">📦 Operadores de pertenencia</h3>', unsafe_allow_html=True)
-    
-    operadores_pertenencia = {
-        "Operador": ["in", "not in"],
-        "Descripción": [
-            "Verifica si un elemento está dentro de una secuencia",
-            "Verifica si un elemento no está dentro de una secuencia"
-        ],
-        "Ejemplo": [
-            "'a' in 'manzana' → True",
-            "'b' not in 'manzana' → True"
-        ]
-    }
-    
-    st.dataframe(pd.DataFrame(operadores_pertenencia), use_container_width=True)
-    
-    st.markdown("---")
-    
-    # 🔹 Operadores lógicos
-    st.markdown('<h3 style="text-align: center;">🧠 Operadores lógicos</h3>', unsafe_allow_html=True)
-    
-    operadores_logicos = {
-        "Operador": ["and", "or", "not"],
-        "Descripción": [
-            "True si ambas condiciones son verdaderas",
-            "True si al menos una condición es verdadera",
-            "Invierte el valor lógico"
-        ],
-        "Ejemplo": [
-            "(5 > 3) and (7 > 5) → True",
-            "(5 > 3) or (7 < 5) → True",
-            "not (5 > 3) → False"
-        ]
-    }
-    
-    st.dataframe(pd.DataFrame(operadores_logicos), use_container_width=True)
-    
-    st.markdown("---")
-    
-    # 🔹 Mini interacción
-    st.markdown("### ⚙️ Prueba tú mismo")
-    
-    a = st.number_input("Valor de a:", value=5)
-    b = st.number_input("Valor de b:", value=3)
-    
-    st.write("a > b:", a > b)
-    st.write("a == b:", a == b)
-    st.write("a < b:", a < b)
-    st.write("(a > b) and (b > 0):", (a > b) and (b > 0))
-
-if opciones == "Declaraciones condicionales":
+if opciones == "Estructuras selectivas":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; ">Declaraciones condicionales: if-elif-else</h2>', unsafe_allow_html=True)
 
     # Breve explicación de las declaraciones condicionales
@@ -1051,201 +946,6 @@ if opciones == "Bucles":
     - Si el número es igual a 5, se imprime un mensaje y se utiliza `break` para salir del bucle.
     - Si el número es par, se imprime un mensaje indicando que es par.
     - Si el número es impar, se imprime un mensaje indicando que es impar.
-    """)
-
-if opciones == "Diccionarios":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Diccionarios de Python</h2>', unsafe_allow_html=True) 
-
-    # Breve explicación de los diccionarios
-    st.write("""
-    Los diccionarios son estructuras de datos que almacenan pares clave-valor.
-    Se definen utilizando llaves `{}` y cada par se separa por comas.
-    Los diccionarios son útiles para almacenar datos relacionados y acceder a ellos de manera eficiente.
-    """, unsafe_allow_html=True)
-
-    # Ejemplo de diccionario en formato código
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Ejemplo de diccionario</h3>', unsafe_allow_html=True)
-    codigo_11 = """
-    # Definición de un diccionario
-    estudiante = {
-        "nombre": "Liam",
-        "apellido": "Payne",
-        "edad": 25,
-        "cursos": ["Python", "Java", "C++"]
-    }
-    # Acceder a valores del diccionario
-    print("Nombre:", estudiante["nombre"])
-    print("Apellido:", estudiante["apellido"])
-    print("Edad:", estudiante["edad"])
-    print("Cursos:", estudiante["cursos"])
-
-    # Modificar un valor del diccionario
-    estudiante["edad"] = 26
-    print("Edad modificada:", estudiante["edad"])
-
-    # Agregar un nuevo par clave-valor
-    estudiante["universidad"] = "PUCP"
-    print("Universidad:", estudiante["universidad"])
-
-    # Verificar si una clave existe en el diccionario
-    existe_nombre = "nombre" in estudiante
-    print("¿Existe la clave 'nombre'?:", existe_nombre)
-
-    # Obtener todas las claves del diccionario
-    claves = estudiante.keys()
-    print("Claves del diccionario:", claves)
-
-    # Obtener todos los valores del diccionario
-    valores = estudiante.values()
-    print("Valores del diccionario:", valores)
-
-    
-    """
-    # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_11, language='python')
-    
-    
-
-if opciones == "Librerías":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Librerías de Python</h2>', unsafe_allow_html=True)
-
-    # Breve explicación de las funciones
-    st.write(""" 
-    Librerías son colecciones de funciones y métodos que permiten realizar tareas específicas sin necesidad de escribir el código desde cero.
-    En Python, existen muchas librerías predefinidas que puedes importar y utilizar en tu código.
-    Algunas de las librerías más comunes son `pandas`, `random`, entre otras.
-    """, unsafe_allow_html=True)
-
-    # La librería random
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Librería random</h3>', unsafe_allow_html=True)
-    st.write("""
-    La librería `random` se utiliza para generar números aleatorios y realizar selecciones aleatorias.
-    Puedes usarla para crear juegos, simulaciones y más.
-    """, unsafe_allow_html=True)
-
-    # Código de ejemplo
-    codigo_10 = """
-    # Importar la librería random
-    import random
-
-    # Generar un número aleatorio entre 1 y 10
-    numero_aleatorio = random.randint(1, 10)
-    print("Número aleatorio:", numero_aleatorio)
-
-    # Elegir un elemento aleatorio de una lista
-    lista = ["manzana", "banana", "naranja"]
-    fruta_aleatoria = random.choice(lista)
-    print("Fruta aleatoria:", fruta_aleatoria)
-
-    """
-    # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_10, language='python')
-
-
-    # Uso de range()
-    st.write("""
-    La función `range()` se utiliza para generar una secuencia de números.
-    Puedes especificar el inicio, el final y el paso de la secuencia.
-    Por ejemplo, `range(1, 10, 2)` generará la secuencia `1, 3, 5, 7, 9`.
-    """, unsafe_allow_html=True)
-
-    # La librería nklt
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Librería nltk</h3>', unsafe_allow_html=True)
-    st.write("""
-    La librería `nltk` (Natural Language Toolkit) se utiliza para el procesamiento de lenguaje natural.
-    Proporciona herramientas para trabajar con texto, como tokenización, análisis de sentimientos y más.
-    """, unsafe_allow_html=True)
-
-    ## Código de ejemplo
-    codigo_11 = """
-    # Importar la librería nltk
-    import nltk
-    nltk.download('stopwords')
-    from nltk.corpus import stopwords
-    stopwords_es = stopwords.words('spanish')
-
-    texto = "Domingo 14 de junio de 1942
-    EL VIERNES DESPERTE ya a las seis. Era comprensible, pues
-    fue el día de mi cumpleaños. Pero no podía levantarme tan
-    temprano y hube de apaciguar mi curiosidad hasta un cuarto para
-    las siete. Entonces ya no soporté más y corrí hasta el comedor,
-    donde nuestro pequeño gatito, Mohrchen, me saludó con efusivo
-    cariño. Después de las siete fui al dormitorio de mis padres y,
-    enseguida, con ellos al salón para encontrar y desenvolver mis
-    regalos. A ti, mi diario, te vi en primer lugar, y sin duda fuiste mi
-    mejor regalo. También me obsequiaron un ramo de rosas, un
-    cactus y unas ramas de rosas silvestres. Fueron los primeros saludos
-    del día, ya que más tarde habría bastante más. Papá y mamá me entregaron 
-    numerosos regalos y mis amigos tampoco se quedaron
-    atrás en materia de mimarme. Entre otras cosas me regalaron un
-    libro titulado, «Cámara Oscura», un juego de mesa, muchas
-    golosinas, un rompecabezas, un broche, las «Sagas y Leyendas de
-    Holanda» de Joseph Cohen, otro libro encantador, «Las
-    Vacaciones de Daisy en la Montaña» y algún dinero. Con éste me
-    compré las leyendas mitológicas griegas y romanas. ¡Fantástico!
-    Enseguida vino Lies y partimos juntas a la escuela. Comencé
-    siguiendo el ritual holandés de obsequiar golosinas a mis maestros
-    y compañeros de clase y luego nos pusimos a trabajar."
-
-    texto_minusculas = texto.lower()
-    texto_depurado = texto_minusculas.replace(",", "").replace(".", "").replace(":", "").replace(";", "").replace("¿", "").replace("¡", "").replace("!", "").replace("?", "").replace("«", "").replace("»", "").replace("/n", "").replace("-", "").replace("_", "")
-    lista_palabras = texto_depurado.split()
-
-    lista_depurada = list()
-    for palabra in lista_palabras:
-        if palabra not in stopwords_es:
-            lista_depurada.append(palabra)
-    
-    print(len(cantidad_palabras))
-    print(len(lista_depurada))        
-    """ 
-    # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_11, language='python')
-
-    # Explicación del ejemplo
-    st.write("""
-    En este ejemplo:
-    - Se importa la librería `nltk` y se descargan las stopwords en español.
-    - Se define un texto en español.
-    - Se convierte el texto a minúsculas y se eliminan los signos de puntuación.
-    - Se genera una lista de palabras y se eliminan las stopwords.
-    - Se imprime la cantidad de palabras originales y la cantidad de palabras depuradas.
-    """)
-
-
-if opciones == "Abrir archivos":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Abrir archivos en Colab</h2>', unsafe_allow_html=True)
-
-    # Breve explicación de cómo abrir archivos
-    st.write("""
-    En Google Colab, puedes abrir archivos de diferentes maneras.
-    Puedes cargar archivos desde tu computadora e importar archivos desde Google Drive.
-    """, unsafe_allow_html=True)
-
-    # Ejemplo de cómo abrir archivos
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Ejemplo de cómo abrir archivos</h3>', unsafe_allow_html=True)
-
-    # Código de ejemplo
-    codigo_12 = """
-    # Importar la librería necesaria
-    from google.colab import files
-    # Importar archivos desde tu computadora
-    uploaded = files.upload()
-    # Mostrar el nombre del archivo subido
-    with open("nombre_archivo.txt", "r") as file:
-        texto = file.read()
-    print(texto)
-    """
-    # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_12, language='python')
-
-    # Explicación del ejemplo
-    st.write("""
-    En este ejemplo:
-    - Se importa la librería `files` de Google Colab.
-    - Se utiliza la función `files.upload()` para cargar un archivo desde tu computadora.
-    - Se abre el archivo y se lee su contenido.
-    - Se imprime el contenido del archivo.
     """)
 
 st.markdown(""" 
