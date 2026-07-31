@@ -1,0 +1,4 @@
+streamlit-monaco
+pandas
+graphviz
+streamlit_option_menu
