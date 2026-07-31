@@ -508,7 +508,7 @@ if opciones == "Operadores":
     st.success(f"Resultado: {resultado}")
 
 
-     st.markdown("---")
+    st.markdown("---")
     
     # 🔹 Operadores comparativos
     st.markdown('<h3 style="text-align: center;">🔍 Operadores comparativos</h3>', unsafe_allow_html=True)
