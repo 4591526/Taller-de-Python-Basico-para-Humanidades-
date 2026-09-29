@@ -27,8 +27,8 @@ opciones = option_menu(
 if opciones == "Introducción":
     st.write("""
     El taller **Python básico para Humanidades** ofrece una introducción 
-    práctica a la programación utilizando **Google Colab** como entorno 
-    de trabajo.
+    práctica a la programación utilizando [**Google Colab**](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?flow_type=2&pann=ogb) 
+    como entorno de trabajo.
 
     A través de ejercicios relacionados con situaciones del ámbito 
     humanístico, los participantes aprenderán a trabajar con variables, 
@@ -43,12 +43,8 @@ if opciones == "Introducción":
 
     st.write("")
 
-    # ============================================================
-    # TEMAS DEL TALLER
-    # ============================================================
-
     st.markdown(
-        '<h2 style="font-size: 40px; text-align: center; color: #4E4E8A;">'
+        '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
         'Temas del taller 📚'
         '</h2>',
         unsafe_allow_html=True
@@ -63,12 +59,9 @@ if opciones == "Introducción":
 
     st.divider()
 
-    # ============================================================
-    # DOCENTES
-    # ============================================================
 
     st.markdown(
-        '<h2 style="font-size: 40px; text-align: center; color: #4E4E8A;">'
+        '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
         'Docentes 👩🏻‍💻👨🏻‍💻'
         '</h2>',
         unsafe_allow_html=True
@@ -76,9 +69,6 @@ if opciones == "Introducción":
 
     col1, col2 = st.columns(2)
 
-    # ------------------------------------------------------------
-    # DOCENTE 1
-    # ------------------------------------------------------------
 
     with col1:
 
@@ -102,9 +92,6 @@ if opciones == "Introducción":
         📧 luisa.gomez@pucp.edu.pe
         """)
 
-    # ------------------------------------------------------------
-    # DOCENTE 2
-    # ------------------------------------------------------------
 
     with col2:
 
@@ -861,13 +848,6 @@ if opciones == "Bucles":
     - Si el número es impar, se imprime un mensaje indicando que es impar.
     """)
 
-st.markdown(""" 
-<hr style="margin-top:40px; margin-bottom:20px;"> 
-<div style=" text-align:center; font-size:18px; color:#555; padding-bottom:20px; "> 
-<p><b>Luisa Gomez</b></p> 
-📩 luisa.gomez@pucp.edu.pe </br>
-💻 GitHub <a href="https://github.com/4591526/" target="_blank" style="text-decoration:none; font-weight:600;"> 
-4591526 </a> </div> """, unsafe_allow_html=True)
 
     
     
