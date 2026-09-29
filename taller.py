@@ -11,7 +11,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.sidebar.title("Taller de Python Básico para Humanidades")
+st.title("Taller de Python Básico para Humanidades")
 
 opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores", "Estructuras selectivas"]
 
