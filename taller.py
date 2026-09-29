@@ -11,7 +11,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Taller de Python Básico para Humanidades")
+st.markdown(f'<h1 style="font-size: 40px; text-align: center; color: blue">Taller de Python Básico para Humanidades</h1>', unsafe_allow_html=True)
 
 opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores", "Estructuras selectivas"]
 
