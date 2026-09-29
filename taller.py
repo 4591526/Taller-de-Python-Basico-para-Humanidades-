@@ -25,43 +25,108 @@ opciones = option_menu(
 )
 
 if opciones == "Introducción":
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
     st.write("""
-    El taller Python básico para Humanidades propone una introducción práctica a la programación utilizando Google Colab. 
-    A través de ejercicios relacionados con situaciones del ámbito humanístico, los participantes aprenderán a trabajar 
-    con variables, tipos de datos, cadenas, listas, operadores, estructuras condicionales, bucles y funciones.
-    
-    El taller busca que los participantes desarrollen habilidades básicas de programación y pensamiento lógico 
-    que puedan aplicar posteriormente en actividades académicas y profesionales relacionadas con el manejo y análisis de información.
+    El taller **Python básico para Humanidades** ofrece una introducción 
+    práctica a la programación utilizando **Google Colab** como entorno 
+    de trabajo.
+
+    A través de ejercicios relacionados con situaciones del ámbito 
+    humanístico, los participantes aprenderán a trabajar con variables, 
+    tipos de datos, cadenas, listas, operadores, estructuras condicionales, 
+    bucles y funciones.
+
+    El taller busca desarrollar habilidades básicas de programación y 
+    pensamiento lógico que puedan aplicarse en actividades académicas 
+    y profesionales relacionadas con la organización, procesamiento y 
+    análisis de información.
     """)
 
     st.write("")
-    
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">Temas del taller</h2>', unsafe_allow_html=True)
-    st.write("""
-    *Primeros pasos en Python
-    *Cadenas, listas y objetos
-    *Condicionales, bucles y funciones
-    *Evaluación práctica
+
+    # ============================================================
+    # TEMAS DEL TALLER
+    # ============================================================
+
+    st.markdown(
+        '<h2 style="font-size: 40px; text-align: center; color: #4E4E8A;">'
+        'Temas del taller 📚'
+        '</h2>',
+        unsafe_allow_html=True
+    )
+
+    st.markdown("""
+    1. **Primeros pasos en Python**
+    2. **Cadenas, listas y objetos**
+    3. **Condicionales, bucles y funciones**
+    4. **Evaluación práctica**
     """)
 
-    st.divider() ## Separador
-    
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A"> Docentes </h2>', unsafe_allow_html=True)
-    st.write("""
-    Luisa Gomez Saltachin
-    Bachillera en Lingüística en la PUCP
-    Estudiante de último ciclo de la maestría en Lingüística en la PUCP
-    Predocente de la Facultad de Artes y Ciencias de la Comunicación
-    Lingüística computacional
-    luisa.gomez@pucp.edu.pe
-    
-    Salvador Farfán Perez
-    Ingeniería Informática en la PUCP 10mo ciclo
-    Practicante del Laboratorio de Humanidades Digitales de la PUCP
-    Formación Principal en Desarrollo y Gestión de proyectos de Software 
-    a20211862@pucp.edu.pe
-    """)
+    st.divider()
+
+    # ============================================================
+    # DOCENTES
+    # ============================================================
+
+    st.markdown(
+        '<h2 style="font-size: 40px; text-align: center; color: #4E4E8A;">'
+        'Docentes 👩🏻‍💻👨🏻‍💻'
+        '</h2>',
+        unsafe_allow_html=True
+    )
+
+    col1, col2 = st.columns(2)
+
+    # ------------------------------------------------------------
+    # DOCENTE 1
+    # ------------------------------------------------------------
+
+    with col1:
+
+        st.markdown(
+            '<h3 style="text-align: center; color: #4E4E8A;">'
+            'Luisa Gomez Saltachin'
+            '</h3>',
+            unsafe_allow_html=True
+        )
+
+        st.markdown("""
+        **Bachillera en Lingüística – PUCP**  
+        Estudiante de último ciclo de la Maestría en Lingüística – PUCP  
+
+        **Experiencia:**  
+        Predocente de la Facultad de Artes y Ciencias de la Comunicación  
+
+        **Área de interés:**  
+        Lingüística computacional  
+
+        📧 luisa.gomez@pucp.edu.pe
+        """)
+
+    # ------------------------------------------------------------
+    # DOCENTE 2
+    # ------------------------------------------------------------
+
+    with col2:
+
+        st.markdown(
+            '<h3 style="text-align: center; color: #4E4E8A;">'
+            'Salvador Farfán Perez'
+            '</h3>',
+            unsafe_allow_html=True
+        )
+
+        st.markdown("""
+        **Estudiante de Ingeniería Informática – PUCP**  
+        Décimo ciclo  
+
+        **Experiencia:**  
+        Practicante del Laboratorio de Humanidades Digitales – PUCP  
+
+        **Área de formación:**  
+        Desarrollo y gestión de proyectos de software  
+
+        📧 a20211862@pucp.edu.pe
+        """)
 
 elif opciones == "Primeros pasos en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
