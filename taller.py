@@ -29,11 +29,6 @@ if opciones == "Introducción":
     práctica a la programación utilizando [**Google Colab**](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?flow_type=2&pann=ogb) 
     como entorno de trabajo.
 
-    A través de ejercicios relacionados con situaciones del ámbito 
-    humanístico, los participantes aprenderán a trabajar con variables, 
-    tipos de datos, cadenas, listas, operadores, estructuras condicionales, 
-    bucles y funciones.
-
     El taller busca desarrollar habilidades básicas de programación y 
     pensamiento lógico que puedan aplicarse en actividades académicas 
     y profesionales relacionadas con la organización, procesamiento y 
@@ -120,7 +115,7 @@ elif opciones == "Primeros pasos en Python":
         st.write("""[Archivo colab - Clase 1](https://colab.research.google.com/drive/19TxemzRkXJ3Wl28HaqhK8X6zHTbO8gdh)""")
     
     st.divider() ## Separador
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Dónde programamos?</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de celdas</h2>', unsafe_allow_html=True)
     st.write("""
     Podemos usar Python en:
     
