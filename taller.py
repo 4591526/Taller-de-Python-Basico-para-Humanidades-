@@ -13,12 +13,16 @@ st.set_page_config(
 
 st.sidebar.title("Taller de Python Básico para Humanidades")
 
-with st.sidebar:
-    opciones = option_menu("Temas de clase: ",["Introducción","Primeros pasos en Python", 
-            "Cadenas de caracteres", "Listas", "Objetos y atributos", "Operadores", "Estructuras selectivas", 
-            "Bucles", "Funciones"] , 
-        icons=['0-circle','1-circle', 'alphabet', 'list', '4-circle', 'calculator', 'braces', 
-               'collection', '9-circle'], menu_icon="filetype-py", default_index=1)
+opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores", "Estructuras selectivas"]
+
+opciones = option_menu(
+    menu_title=None,
+    options=opciones_menu,
+    icons=['0-circle','1-circle', 'alphabet', 'list', '4-circle', 'calculator'],
+    menu_icon="cast",
+    default_index=0,
+    orientation="horizontal"
+)
 
 if opciones == "Introducción":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
