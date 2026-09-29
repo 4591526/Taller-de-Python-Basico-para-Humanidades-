@@ -11,7 +11,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown(f'<h1 style="font-size: 40px; text-align: center; color: blue">Taller de Python Básico para Humanidades</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="font-size: 40px; text-align: center; color: #4E4E8A">Taller de Python Básico para Humanidades</h1>', unsafe_allow_html=True)
 
 opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores", "Estructuras selectivas"]
 
@@ -27,197 +27,41 @@ opciones = option_menu(
 if opciones == "Introducción":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
     st.write("""
-    Una forma sencilla de entender qué es programar es pensar en una receta de cocina. 
-    Por ejemplo, para preparar pasta seguimos una secuencia de instrucciones: primero hervimos agua, luego agregamos la pasta,
-    después esperamos aproximadamente diez minutos y finalmente colamos. 
-    Esta secuencia ordenada de pasos para lograr un objetivo es lo que en programación se conoce como un algoritmo.
+    El taller Python básico para Humanidades propone una introducción práctica a la programación utilizando Google Colab. 
+    A través de ejercicios relacionados con situaciones del ámbito humanístico, los participantes aprenderán a trabajar 
+    con variables, tipos de datos, cadenas, listas, operadores, estructuras condicionales, bucles y funciones.
     
-    Un algoritmo, por tanto, no es algo exclusivo de las computadoras, 
-    sino una forma estructurada de resolver un problema mediante instrucciones claras y ordenadas.
-
-    Programar implica desarrollar habilidades como:
-    * Descomponer un problema grande en partes más pequeñas y manejables.
-    * Establecer una secuencia lógica u ordenada de acciones.
-    * Definir qué hacer según ciertas condiciones.
-    * Identificar repeticiones o similitudes que permitan simplificar el problema.
-    * Lograr que una tarea repetitiva pueda ejecutarse de forma automática.
-    
-    En este sentido, programar no solo consiste en escribir código, sino en aprender a pensar de manera estructurada para resolver problemas de forma 
-    eficiente.
+    El taller busca que los participantes desarrollen habilidades básicas de programación y pensamiento lógico 
+    que puedan aplicar posteriormente en actividades académicas y profesionales relacionadas con el manejo y análisis de información.
     """)
 
     st.write("")
     
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué NO es programar? ❌</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">Temas del taller</h2>', unsafe_allow_html=True)
     st.write("""
-    Existen muchas ideas equivocadas sobre lo que significa programar. 
-    Programar no consiste en memorizar grandes cantidades de código ni en conocer fórmulas complejas. 
-    Tampoco implica necesariamente ser bueno en matemáticas, ni saber muchos lenguajes de programación. 
-    Del mismo modo, no es una actividad exclusiva de ingenieros ni requiere escribir instrucciones complicadas o incomprensibles.
-
-    Más bien, programar es una habilidad que puede aprender cualquier persona interesada en resolver problemas de manera estructurada. 
-    Se trata principalmente de organizar ideas, pensar con lógica y encontrar formas claras de dar instrucciones paso a paso para alcanzar un objetivo.
+    *Primeros pasos en Python
+    *Cadenas, listas y objetos
+    *Condicionales, bucles y funciones
+    *Evaluación práctica
     """)
 
     st.divider() ## Separador
     
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es Python? 💻</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A"> Docentes </h2>', unsafe_allow_html=True)
     st.write("""
-    Python es un lenguaje de programación que permite convertir ideas en instrucciones que una computadora puede ejecutar. 
-    Fue creado por Guido van Rossum y presentado en 1991. 
-    Se trata de un lenguaje de programación de alto nivel, diseñado para ser sencillo, claro y fácil de leer.
-
-    Python puede considerarse como un puente entre el lenguaje humano y el lenguaje de las máquinas, 
-    ya que su sintaxis se parece mucho al lenguaje natural. 
-    Gracias a esta característica, su aprendizaje suele ser más accesible en comparación con otros lenguajes de programación, 
-    especialmente para estudiantes que no provienen de áreas técnicas.
+    Luisa Gomez Saltachin
+    Bachillera en Lingüística en la PUCP
+    Estudiante de último ciclo de la maestría en Lingüística en la PUCP
+    Predocente de la Facultad de Artes y Ciencias de la Comunicación
+    Lingüística computacional
+    luisa.gomez@pucp.edu.pe
     
-    Entre sus principales características destacan:
-    * su sintaxis clara que permite comprender el código con relativa facilidad,
-    * muchas de sus instrucciones se parecen a expresiones del inglés cotidiano,
-    * Python es una herramienta muy utilizada en el análisis de datos y la investigación académica,
-    * permite analizar textos, estudiar patrones lingüísticos y procesar lenguaje natural,
-    * facilita el análisis de grandes volúmenes de información y la automatización de procesos de análisis.
-    
-    En este sentido, Python no solo es una herramienta técnica, sino también un recurso que permite a investigadores
-    desarrollar nuevas formas de analizar información y resolver problemas mediante el pensamiento computacional.
+    Salvador Farfán Perez
+    Ingeniería Informática en la PUCP 10mo ciclo
+    Practicante del Laboratorio de Humanidades Digitales de la PUCP
+    Formación Principal en Desarrollo y Gestión de proyectos de Software 
+    a20211862@pucp.edu.pe
     """)
-
-    col1, col2, col3 = st.columns([1,2,1])
-    with col2:
-        # Botón que abre el popup
-        if st.button("Ver más sobre Python"):
-            
-            @st.dialog("Python")
-            def show_info():
-                
-                col4, col5, col6 = st.columns([1,2,1])
-    
-                with col5:
-                    st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg", width=250)
-                             
-                    st.markdown("""
-                    <p style="text-align:center; font-size:14px;">
-                    Guido van Rossum <br>
-                    Creador de Python
-                    </p>
-                    """, unsafe_allow_html=True)
-        
-                st.markdown("""
-                🔗 Página oficial de [Python](https://www.python.org/)
-                """)
-        
-            show_info()
-
-    st.divider() ## Separador
-    
-    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A"> Entornos de programación en Python ⌨</h2>', unsafe_allow_html=True)
-    st.write("""
-    Antes de escribir nuestro primer programa, es importante conocer algunos 
-    entornos donde podemos escribir y ejecutar código Python. Cada uno tiene 
-    ventajas según el tipo de trabajo que queramos realizar.
-    """)
-
-    # VS CODE
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E"> Visual Studio Code</h2>', unsafe_allow_html=True)
-
-    st.write("""
-    **Visual Studio Code (VS Code)** es un editor de código fuente gratuito y 
-    multiplataforma desarrollado por Microsoft.
-    """)
-    st.markdown("""
-    **Características principales:**
-    - Es un programa ligero y rápido  
-    - Permite instalar extensiones (Python, JavaScript, R, C++, etc.)  
-    - Permite manejar carpetas y archivos fácilmente  
-    - Integra una terminal  
-    - Permite personalizar apariencia y atajos  
-    - Integra GitHub para control de versiones  
-    """)
-
-    col7, col8, col9 = st.columns([1,2,1])
-    with col8:
-        # Botón que abre el popup
-        if st.button("Ver más sobre VS Code"):
-            
-            @st.dialog("Visual Studio Code")
-            def show_info():
-                
-                col10, col11, col12 = st.columns([1,2,1])
-    
-                with col11:
-                    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9E5HZlsBUfIyQdZy53DBNd5c9aIxECWdFww&s", width=250)
-        
-                st.markdown("""
-                🔗 Página oficial de [VS Code](https://code.visualstudio.com)
-                """)
-        
-            show_info()
-
-    st.write("")
-    
-    # COLAB Y JUPYTER
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
-    
-    st.write("""
-    **Google Colaboratory (Colab)** y **Jupyter Notebook** son entornos 
-    interactivos muy usados en ciencia de datos, investigación y educación.
-    """)
-    # Crear un diccionario con las características de Google Colab y Jupyter Notebook
-    colab_vs_jupyter = {
-        "Google Colaboratory (Colab)": {
-            "Acceso": "Es accesible desde cualquier dispositivo con internet.",
-            "Almacenamiento": "Se integra con Google Drive para guardar y cargar archivos a la nube.",
-            "Recursos": "Proporciona GPU (tarjeta gráfica) y TPU (procesador) gratuitas con ciertas limitaciones.",
-            "Instalación": "No requiere instalación, solo una cuenta de Google.",
-            "Colaboración": "Permite compartir y editar notebooks en tiempo real.",
-            "Restricciones": "Límites de tiempo de ejecución y desconexión automática."
-        },
-        "Jupyter Notebook": {
-            "Acceso": "Se ejecuta en la computadora del usuario.",
-            "Almacenamiento": "Los archivos se guardan en el sistema local.",
-            "Recursos": "Depende del hardware del usuario.",
-            "Instalación": "Requiere instalación con Anaconda o VSCode.",
-            "Colaboración": "No tiene colaboración en tiempo real sin herramientas externas.",
-            "Restricciones": "No tiene límite de tiempo de ejecución, depende del equipo."
-        }
-    }
-
-    # Convertir a DataFrame
-    df = pd.DataFrame(colab_vs_jupyter)
-
-    # Mostrar en Streamlit
-    st.dataframe(df)
-
-    col13, col14, col15 = st.columns([1,2,1])
-    with col14:
-        # Botón que abre el popup
-        if st.button("Ver más sobre Colab y Jupyter"):
-            
-            @st.dialog("Notebooks: Colab y Jupyter")
-            def show_info():
-                
-                col16, col17, col18 = st.columns([1,2,1])
-    
-                with col17:
-                    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyuHWMd6UOi4d_oVuHTBZsGvS7kG6TFK2yQ&s", width=250)
-                    st.image("https://images.seeklogo.com/logo-png/35/1/jupyter-logo-png_seeklogo-354673.png", width=250)
-        
-                st.markdown("""
-                🔗 Dónde descargar [Colab](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?hl=es)
-                
-                🔗 Página oficial de [Jupyter](https://jupyter.org)
-                """)
-            show_info()
-            
-    st.write("")
-    
-    # VIDEO
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
-    col19, col20, col21 = st.columns([1,1.5,1])
-    with col20:
-    # Insertar un video explicativo de los entornos: VSC y Jupyter
-        st.video("https://www.youtube.com/watch?v=IVMNhciviwc")
 
 elif opciones == "Primeros pasos en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
