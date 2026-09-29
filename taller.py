@@ -11,8 +11,6 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown(f'<h1 style="font-size: 40px; text-align: center; color: #4E4E8A">Taller de Python Básico para Humanidades</h1>', unsafe_allow_html=True)
-
 opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores", "Estructuras selectivas"]
 
 opciones = option_menu(
@@ -25,6 +23,7 @@ opciones = option_menu(
 )
 
 if opciones == "Introducción":
+    st.markdown(f'<h1 style="font-size: 40px; text-align: center; color: #4E4E8A">Taller de Python Básico para Humanidades</h1>', unsafe_allow_html=True)
     st.write("""
     El taller **Python básico para Humanidades** ofrece una introducción 
     práctica a la programación utilizando [**Google Colab**](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?flow_type=2&pann=ogb) 
@@ -114,7 +113,7 @@ if opciones == "Introducción":
         """)
 
 elif opciones == "Primeros pasos en Python":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Primeros pasos en Python</h2>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
     with col2:
