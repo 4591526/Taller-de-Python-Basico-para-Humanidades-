@@ -41,7 +41,7 @@ if opciones == "Introducción":
     análisis de información.
     """)
 
-    st.write("")
+    st.divider()
 
     st.markdown(
         '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
@@ -116,7 +116,10 @@ if opciones == "Introducción":
 elif opciones == "Primeros pasos en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
 
-    st.write("""[Archivo colab - Clase 1](https://colab.research.google.com/drive/19TxemzRkXJ3Wl28HaqhK8X6zHTbO8gdh)""")
+    col1, col2, col3 = st.columns(3)
+    with col2:
+        st.write("""[Archivo colab - Clase 1](https://colab.research.google.com/drive/19TxemzRkXJ3Wl28HaqhK8X6zHTbO8gdh)""")
+    
     st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Dónde programamos?</h2>', unsafe_allow_html=True)
     st.write("""
