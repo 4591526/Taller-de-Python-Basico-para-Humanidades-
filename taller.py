@@ -59,34 +59,29 @@ if opciones == "Introducción":
     
      with col3:
         with st.container(border=True):
-        st.markdown("3 🍽️ Plato terminado")
-        st.caption("Obtenemos el resultado final.")
+            st.markdown("3 🍽️ Plato terminado")
+            st.caption("Obtenemos el resultado final.")
     
     
     st.markdown(f'<h2 style="font-size: 25px; text-align: center; color: #7f3213">💻 En un programa</h2>', unsafe_allow_html=True)
     
-    col1, col2, col3 = st.columns([1, 0.2, 1])
+    col1, col2, col3 = st.columns(3)
     
     with col1:
         with st.container(border=True):
-            st.markdown("### 📥 Datos de entrada")
+            st.markdown("1 📥 Datos de entrada")
             st.caption("Información que recibe el programa.")
     
     with col2:
-        st.markdown("<br><br>→", unsafe_allow_html=True)
-    
-    with col3:
         with st.container(border=True):
-            st.markdown("### ⚙️ Instrucciones")
+            st.markdown("2 ⚙️ Instrucciones")
             st.caption("El programa procesa los datos.")
     
-    st.markdown("<div style='text-align:center; font-size:30px;'>↓</div>",
-                unsafe_allow_html=True)
-    
-    with st.container(border=True):
-        st.markdown("### 📤 Resultado")
-        st.caption("Información que genera el programa.")
-    
+    with col2:
+        with st.container(border=True):
+            st.markdown("3 📤 Resultado")
+            st.caption("Información que genera el programa.")
+        
     st.divider()
 
     st.markdown(
