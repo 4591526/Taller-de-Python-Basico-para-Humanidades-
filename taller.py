@@ -206,6 +206,26 @@ elif opciones == "Primeros pasos en Python":
             st.write("Aquí escribes y ejecutas tus programas en **Python**.")
 
     st.divider() ## Separador
+
+    st.subheader("📓 ¿Cómo se ve un cuaderno de Colab?")
+
+    with st.container(border=True):
+    
+        st.markdown("### 📄 Cuaderno_Modulo1.ipynb")
+    
+        st.markdown("**## Introducción**")
+    
+        st.caption("1 · Celda de texto (Markdown)")
+    
+        st.divider()
+    
+        st.code('print("Hola mundo")', language="python")
+    
+        st.caption("2 · Celda de código")
+    
+        st.success("Hola mundo")
+    
+        st.caption("3 · Resultado de la ejecución")
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
