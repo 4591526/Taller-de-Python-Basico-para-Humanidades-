@@ -264,9 +264,7 @@ elif opciones == "Primeros pasos en Python":
             st.markdown("### `end`")
             st.write("Se añade al final de lo que se imprime.")
             st.code("end='\\n'", language="python")
-    
-    st.divider()
-    
+   
     st.markdown("### Ejemplo 🅰️ `sep='\\n'`, `end='\\t'`")
     
     st.code("""
@@ -279,8 +277,6 @@ elif opciones == "Primeros pasos en Python":
     st.code("""
     Mundial
     2026    hola""")
-    
-    st.divider()
     
     st.markdown("### Ejemplo 🅱️ `sep='\\t'`, `end='\\n'`")
     
@@ -299,18 +295,14 @@ elif opciones == "Primeros pasos en Python":
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
-    st.markdown(f"Esta función permite consultar en la documentación de Python.")
+    st.markdown(f"Una función integrada para consultar la documentación de otras funciones.")
 
-    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
-    st.write("""
-    Usamos la función `help()` para consultar información sobre otra función.
-
-    En este caso, `help(print)` muestra la documentación de la función `print()`.
-    
+    st.info("""
     **Nota:**
     Python tiene documentación integrada que permite entender funciones, ver parámetros y aprender su uso correcto.
     Esto es muy útil cuando estamos aprendiendo programación.
     """)
+    
     st.divider() ## Separador
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
