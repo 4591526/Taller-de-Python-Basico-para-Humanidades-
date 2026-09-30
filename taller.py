@@ -294,7 +294,7 @@ elif opciones == "Primeros pasos en Python":
     st.divider() ## Separador
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A"> Variables </h2>', unsafe_allow_html=True)
-    #st.image()
+    st.image("variable.png")
     
     st.divider() ## Separador
     
