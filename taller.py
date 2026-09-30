@@ -77,7 +77,7 @@ if opciones == "Introducción":
             st.markdown("2 ⚙️ Instrucciones")
             st.caption("El programa procesa los datos.")
     
-    with col2:
+    with col3:
         with st.container(border=True):
             st.markdown("3 📤 Resultado")
             st.caption("Información que genera el programa.")
