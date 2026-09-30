@@ -136,7 +136,7 @@ if opciones == "Introducción":
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image("foto_luisa.png")
+        st.image("foto_luisa.png", width = 500)
         st.markdown(
             '<h3 style="text-align: center; color: #7f3213;">'
             'Luisa Gomez Saltachin'
@@ -158,7 +158,7 @@ if opciones == "Introducción":
         """)
 
     with col2:
-        st.image("foto_salvador.jpeg")
+        st.image("foto_salvador.jpeg", width = 500)
         st.markdown(
             '<h3 style="text-align: center; color: #7f3213;">'
             'Salvador Farfán Perez'
