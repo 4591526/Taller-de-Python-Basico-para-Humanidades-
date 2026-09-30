@@ -83,8 +83,40 @@ if opciones == "Introducción":
         
     st.divider()
 
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">🐍 Python en las Humanidades</h2>', unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        with st.container(border=True):
+            st.markdown("### Aa")
+            st.markdown("#### Análisis de textos y corpus")
+            st.write("Contar palabras, buscar patrones y comparar documentos.")
+    
+    with col2:
+        with st.container(border=True):
+            st.markdown("### ⟳")
+            st.markdown("#### Automatización de tareas")
+            st.write("Repetir procesos manuales sin errores y en segundos.")
+    
+    col3, col4 = st.columns(2)
+    
+    with col3:
+        with st.container(border=True):
+            st.markdown("### ☰")
+            st.markdown("#### Bases de datos bibliográficas")
+            st.write("Organizar y consultar referencias y catálogos.")
+    
+    with col4:
+        with st.container(border=True):
+            st.markdown("### ▤")
+            st.markdown("#### Procesamiento de encuestas")
+            st.write("Tabular respuestas y obtener resúmenes automáticos.")
+
+    st.divider()
+    
     st.markdown(
-        '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
+        '<h2 style="font-size: 30px; text-align: center; color: #4E8A4E;">'
         'Temas del taller 📚'
         '</h2>',
         unsafe_allow_html=True
@@ -101,7 +133,7 @@ if opciones == "Introducción":
 
 
     st.markdown(
-        '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
+        '<h2 style="font-size: 30px; text-align: center; color: #4E8A4E;">'
         'Docentes 👩🏻‍💻👨🏻‍💻'
         '</h2>',
         unsafe_allow_html=True
@@ -112,7 +144,7 @@ if opciones == "Introducción":
     with col1:
 
         st.markdown(
-            '<h3 style="text-align: center; color: #4E4E8A;">'
+            '<h3 style="text-align: center; color: #7f3213;">'
             'Luisa Gomez Saltachin'
             '</h3>',
             unsafe_allow_html=True
@@ -134,7 +166,7 @@ if opciones == "Introducción":
     with col2:
 
         st.markdown(
-            '<h3 style="text-align: center; color: #4E4E8A;">'
+            '<h3 style="text-align: center; color: #7f3213;">'
             'Salvador Farfán Perez'
             '</h3>',
             unsafe_allow_html=True
