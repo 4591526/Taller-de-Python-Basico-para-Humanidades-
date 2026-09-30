@@ -45,26 +45,21 @@ if opciones == "Introducción":
     """)
     
     st.markdown(f'<h2 style="font-size: 25px; text-align: center; color: #7f3213">🍳 En la cocina</h2>', unsafe_allow_html=True)
-    col1, col2, col3 = st.columns([1, 0.2, 1])
+    col1, col2, col3 = st.columns(3)
     
     with col1:
         with st.container(border=True):
-            st.markdown("### 🥕 Ingredientes")
+            st.markdown("1 🥕 Ingredientes")
             st.caption("Lo que necesitamos para preparar el plato.")
     
     with col2:
-        st.markdown("<br><br> →", unsafe_allow_html=True)
-    
-    with col3:
         with st.container(border=True):
-            st.markdown("### 👨‍🍳 Seguir los pasos")
+            st.markdown("2 👨‍🍳 Seguir los pasos")
             st.caption("Realizamos las instrucciones en orden.")
     
-    st.markdown("<div style='text-align:center; font-size:30px;'>↓</div>",
-                unsafe_allow_html=True)
-    
-    with st.container(border=True):
-        st.markdown("### 🍽️ Plato terminado")
+     with col3:
+        with st.container(border=True):
+        st.markdown("3 🍽️ Plato terminado")
         st.caption("Obtenemos el resultado final.")
     
     
