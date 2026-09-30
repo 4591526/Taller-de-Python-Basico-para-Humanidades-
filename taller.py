@@ -44,40 +44,53 @@ if opciones == "Introducción":
     para resolver un problema o automatizar una tarea. Igual que seguir una receta.
     """)
     
-    st.subheader("🍳 En la cocina")
+    st.markdown(f'<h2 style="font-size: 25px; text-align: center; color: #7f3213">🍳 En la cocina</h2>', unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 0.2, 1])
+    
+    with col1:
+        with st.container(border=True):
+            st.markdown("### 🥕 Ingredientes")
+            st.caption("Lo que necesitamos para preparar el plato.")
+    
+    with col2:
+        st.markdown("<br><br>### →", unsafe_allow_html=True)
+    
+    with col3:
+        with st.container(border=True):
+            st.markdown("### 👨‍🍳 Seguir los pasos")
+            st.caption("Realizamos las instrucciones en orden.")
+    
+    st.markdown("<div style='text-align:center; font-size:30px;'>↓</div>",
+                unsafe_allow_html=True)
+    
+    with st.container(border=True):
+        st.markdown("### 🍽️ Plato terminado")
+        st.caption("Obtenemos el resultado final.")
+    
+    
+    st.markdown(f'<h2 style="font-size: 25px; text-align: center; color: #7f3213">💻 En un programa</h2>', unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns([1, 0.2, 1])
     
     with col1:
-        st.markdown("### 🥕 Ingredientes")
+        with st.container(border=True):
+            st.markdown("### 📥 Datos de entrada")
+            st.caption("Información que recibe el programa.")
     
     with col2:
-        st.markdown("### →")
+        st.markdown("<br><br>### →", unsafe_allow_html=True)
     
     with col3:
-        st.markdown("### 👨‍🍳 Seguir los pasos en orden")
+        with st.container(border=True):
+            st.markdown("### ⚙️ Instrucciones")
+            st.caption("El programa procesa los datos.")
     
-    st.markdown("### ↓")
+    st.markdown("<div style='text-align:center; font-size:30px;'>↓</div>",
+                unsafe_allow_html=True)
     
-    st.markdown("### 🍽️ Plato terminado")
-    
-    
-    st.subheader("💻 En un programa")
-    
-    col1, col2, col3 = st.columns([1, 0.2, 1])
-    
-    with col1:
-        st.markdown("### 📥 Datos de entrada")
-    
-    with col2:
-        st.markdown("### →")
-    
-    with col3:
-        st.markdown("### ⚙️ Ejecutar las instrucciones")
-    
-    st.markdown("### ↓")
-    
-    st.markdown("### 📤 Resultado")
+    with st.container(border=True):
+        st.markdown("### 📤 Resultado")
+        st.caption("Información que genera el programa.")
     
     
     st.subheader("🌐 En Streamlit")
@@ -85,17 +98,24 @@ if opciones == "Introducción":
     col1, col2, col3 = st.columns([1, 0.2, 1])
     
     with col1:
-        st.markdown("### 📥 Datos de entrada del usuario")
+        with st.container(border=True):
+            st.markdown("### 📥 Entrada")
+            st.caption("El usuario proporciona información.")
     
     with col2:
-        st.markdown("### →")
+        st.markdown("<br><br>### →", unsafe_allow_html=True)
     
     with col3:
-        st.markdown("### 🐍 Ejecutar las instrucciones de Python")
+        with st.container(border=True):
+            st.markdown("### 🐍 Python")
+            st.caption("Se ejecutan las instrucciones.")
     
-    st.markdown("### ↓")
+    st.markdown("<div style='text-align:center; font-size:30px;'>↓</div>",
+                unsafe_allow_html=True)
     
-    st.markdown("### 🖥️ Resultado mostrado en la aplicación")
+    with st.container(border=True):
+        st.markdown("### 🖥️ Aplicación")
+        st.caption("Streamlit muestra el resultado al usuario.")
 
     st.divider()
 
