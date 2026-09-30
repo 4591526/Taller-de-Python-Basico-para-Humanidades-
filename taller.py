@@ -110,9 +110,14 @@ if opciones == "Introducción":
 elif opciones == "Primeros pasos en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Primeros pasos en Python</h2>', unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([1,1.5,1])
+    col1, col2, col3 = st.columns([1, 2, 1])
+
     with col2:
-        st.write("""[Archivo colab - Clase 1](https://colab.research.google.com/drive/19TxemzRkXJ3Wl28HaqhK8X6zHTbO8gdh)""")
+        st.link_button(
+            "📓 Archivo Colab - Clase 1",
+            "https://colab.research.google.com/drive/19TxemzRkXJ3Wl28HaqhK8X6zHTbO8gdh",
+            use_container_width=True
+        )
     
     st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de celdas</h2>', unsafe_allow_html=True)
