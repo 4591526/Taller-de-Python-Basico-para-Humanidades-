@@ -186,7 +186,7 @@ elif opciones == "Primeros pasos en Python":
 
     with col2:
         st.link_button(
-            "📓 Archivo Colab - Clase 1",
+            "📓 Colab - Clase 1",
             "https://colab.research.google.com/drive/19TxemzRkXJ3Wl28HaqhK8X6zHTbO8gdh",
             use_container_width=True
         )
@@ -221,7 +221,20 @@ elif opciones == "Primeros pasos en Python":
         
         **Guardar:** los cambios se guardan automáticamente en Google Drive.
         """)
+
+    st.divider() ## Separador
     
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
+    st.code("""# Este programa imprime un saludo
+    print("Hola")
+    """, language="python")
+
+    st.markdown(f'<h3 style="text-align: center; color: #7f3213">¿Qué está ocurriendo aquí? 🤔</h3>', unsafe_allow_html=True)
+    st.write("""
+    Todo lo que va después de `#` es un comentario: Python lo ignora al ejecutar.
+    Sirven para explicar la intención del código a otros y a ti mismo en el futuro.
+    """)
+    st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
     st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
@@ -253,21 +266,7 @@ elif opciones == "Primeros pasos en Python":
     Esto es muy útil cuando estamos aprendiendo programación.
     """)
     st.divider() ## Separador
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
-    st.code("""# Este es un comentario
-    print("Hola")
-    """, language="python")
-
-    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
-    st.write("""
-    Los comentarios son líneas que Python **no ejecuta**.
-    Sirven para explicar el código; documentar programas; y recordar qué hace cada parte.
-    Los comentarios empiezan con `#`.
     
-    **Nota:**
-    Los comentarios son leídos por humanos, no por Python.
-    """)
-    st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
     st.code("print(Hola)", language="python")
     st.markdown(f"Esto genera un error porque faltan comillas.")
