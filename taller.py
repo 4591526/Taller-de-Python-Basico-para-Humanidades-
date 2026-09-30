@@ -194,38 +194,27 @@ elif opciones == "Primeros pasos en Python":
     st.divider() ## Separador
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de celdas</h2>', unsafe_allow_html=True)
-    col1, col2 = st.columns(2)
-    with col1:
-        with st.container(border=True):
-            st.markdown("### 1️⃣ Celdas de texto")
-            st.write("Notas y explicaciones utilizando **Markdown**.")
     
-    with col2:
-        with st.container(border=True):
-            st.markdown("### 2️⃣ Celdas de código")
-            st.write("Aquí escribes y ejecutas tus programas en **Python**.")
-
-    st.divider() ## Separador
-
     st.subheader("📓 ¿Cómo se ve un cuaderno de Colab?")
 
     with st.container(border=True):
     
-        st.markdown("### 📄 Cuaderno_Modulo1.ipynb")
+        st.markdown("### 📄 Prueba.ipynb")
     
-        st.markdown("**## Introducción**")
-    
-        st.caption("1 · Celda de texto (Markdown)")
+        st.markdown("**# Formato de encabezado principal**")
+        st.markdown("**## Formato de encabezado secundario**")
+        
+        st.caption("1 · Celda de texto (Markdown), donde podemos escribir y dar formato a títulos, explicaciones y otros contenidos que pueden acompañar nuestro código")
     
         st.divider()
     
         st.code('print("Hola mundo")', language="python")
     
-        st.caption("2 · Celda de código")
+        st.caption("2 · Celda de código, donde escribes y ejecutas códigos de Python")
     
         st.success("Hola mundo")
     
-        st.caption("3 · Resultado de la ejecución")
+        st.caption("3 · Salida (output), resultado de la ejecución")
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
