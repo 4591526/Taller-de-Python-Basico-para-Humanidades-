@@ -48,7 +48,7 @@ if opciones == "Introducción":
     1. **Primeros pasos en Python**
     2. **Cadenas, listas y operadores**
     3. **Condicionales, bucles y funciones**
-    4. **Evaluación práctica**
+    4. **Librerías**
     """)
 
     st.divider()
