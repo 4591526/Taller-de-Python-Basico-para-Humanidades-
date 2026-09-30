@@ -293,15 +293,8 @@ elif opciones == "Primeros pasos en Python":
     
     st.divider() ## Separador
     
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
-    st.code("help(print)", language="python")
-    st.markdown(f"Una función integrada para consultar la documentación de otras funciones.")
-
-    st.info("""
-    **Nota:**
-    Python tiene documentación integrada que permite entender funciones, ver parámetros y aprender su uso correcto.
-    Esto es muy útil cuando estamos aprendiendo programación.
-    """)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A"> Variables </h2>', unsafe_allow_html=True)
+    #st.image()
     
     st.divider() ## Separador
     
