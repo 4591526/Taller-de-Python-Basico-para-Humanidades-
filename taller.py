@@ -97,7 +97,7 @@ if opciones == "Introducción":
     
     st.markdown("### 🖥️ Resultado mostrado en la aplicación")
 
-     st.divider()
+    st.divider()
 
     st.markdown(
         '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
