@@ -237,7 +237,7 @@ elif opciones == "Primeros pasos en Python":
     
     st.divider() ## Separador
     
-    # st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función ´print()´ ▶️</h2>', unsafe_allow_html=True)
+    # st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.markdown(f"Muestra en pantalla el texto que recibe como argumento. Funciona con texto y también con números.")
     st.code("""
         print('¡Hola Mundo!')
@@ -247,7 +247,7 @@ elif opciones == "Primeros pasos en Python":
         
         2026 """)
 
-    st.markdown(f'<h3 style="font-size: 30px; text-align: center; color: #4E8A4E">Sintaxis básica ´print()´</h3>', unsafe_allow_html=True)
+    st.markdown(f'<h3 style="font-size: 30px; text-align: center; color: #7f3213">Sintaxis básica</h3>', unsafe_allow_html=True)
 
     st.code("print(*args, sep=' ', end='\\n')", language="python")
     
@@ -276,7 +276,7 @@ elif opciones == "Primeros pasos en Python":
     
     st.markdown("**Salida:**")
     
-    st.code("""
+    st.success("""
     Mundial
     2026    hola
     """)
