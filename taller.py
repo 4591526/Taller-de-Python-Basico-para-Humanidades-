@@ -230,13 +230,14 @@ elif opciones == "Primeros pasos en Python":
 
     st.info("""
     **¿Qué está ocurriendo aquí?**
+    
     Todo lo que va después de `#` es un comentario, Python lo ignora al ejecutar.
     Sirven para explicar la intención del código a otros y a ti mismo en el futuro.
     """)
     
     st.divider() ## Separador
     
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
     st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
 
