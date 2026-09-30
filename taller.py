@@ -228,8 +228,8 @@ elif opciones == "Primeros pasos en Python":
     st.code("""# Este programa imprime un saludo
     print("Hola") """, language="python")
 
-    st.markdown(f'<h3 style="text-align: center; color: #7f3213">¿Qué está ocurriendo aquí?</h3>', unsafe_allow_html=True)
-    st.write("""
+    st.info("""
+    **¿Qué está ocurriendo aquí?**
     Todo lo que va después de `#` es un comentario, Python lo ignora al ejecutar.
     Sirven para explicar la intención del código a otros y a ti mismo en el futuro.
     """)
