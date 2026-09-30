@@ -11,12 +11,12 @@ st.set_page_config(
     layout="wide"
 )
 
-opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores", "Estructuras selectivas"]
+opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores"]
 
 opciones = option_menu(
     menu_title=None,
     options=opciones_menu,
-    icons=['0-circle','1-circle', 'alphabet', 'list', '4-circle', 'calculator'],
+    icons=['0-circle','1-circle', 'alphabet', 'list', 'calculator'],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal"
