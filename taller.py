@@ -238,15 +238,14 @@ elif opciones == "Primeros pasos en Python":
     st.divider() ## Separador
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
-    st.code("""
-        print('¡Hola Mundo!')
+    st.markdown(f"Muestra en pantalla el texto que recibe como argumento. Funciona con texto y también con números.")
+    st.code("""print('¡Hola Mundo!')
         print(2026) """, language='python')
     st.success("""
         ¡Hola Mundo!
         
         2026 """)
-    st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
-
+    
     st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
     st.write("""
     Usamos la función `print()` para mostrar el texto **"¡Hola Mundo!"** en la pantalla.
