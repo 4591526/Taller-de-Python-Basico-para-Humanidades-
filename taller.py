@@ -192,21 +192,19 @@ elif opciones == "Primeros pasos en Python":
         )
     
     st.divider() ## Separador
+    
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de celdas</h2>', unsafe_allow_html=True)
-    st.write("""
-    Podemos usar Python en:
+    col1, col2 = st.columns(2)
+    with col1:
+        with st.container(border=True):
+            st.markdown("### 1️⃣ Celdas de texto")
+            st.write("Notas y explicaciones utilizando **Markdown**.")
     
-    **Notebooks (Colab, Jupyter):**
-    - El archivo completo se guarda como .ipynb
-    - La estructura del archivo presenta dos tipos de celdas: texto y código
-    - Ejecutamos por celdas de código
-    - El resultado se observa debajo de la celda código
-    
-    **VS Code:**
-    - Ejecutamos el archivo completo (.py)
-    - La estructura del archivo solo presenta líneas de código donde se puede explicar el proceso a través del formato de comentarios (#)
-    - El resultado se observa en la terminal
-    """)
+    with col2:
+        with st.container(border=True):
+            st.markdown("### 2️⃣ Celdas de código")
+            st.write("Aquí escribes y ejecutas tus programas en **Python**.")
+
     st.divider() ## Separador
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
