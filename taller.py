@@ -57,11 +57,10 @@ if opciones == "Introducción":
             st.markdown("2 👨‍🍳 Seguir los pasos")
             st.caption("Realizamos las instrucciones en orden.")
     
-     with col3:
+    with col3:
         with st.container(border=True):
             st.markdown("3 🍽️ Plato terminado")
             st.caption("Obtenemos el resultado final.")
-    
     
     st.markdown(f'<h2 style="font-size: 25px; text-align: center; color: #7f3213">💻 En un programa</h2>', unsafe_allow_html=True)
     
