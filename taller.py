@@ -158,7 +158,7 @@ if opciones == "Introducción":
         """)
 
     with col2:
-        st.image("foto_salvador.jpeg", width = 450)
+        st.image("foto_salvador.jpeg", width = 480)
         st.markdown(
             '<h3 style="text-align: center; color: #7f3213;">'
             'Salvador Farfán Perez'
