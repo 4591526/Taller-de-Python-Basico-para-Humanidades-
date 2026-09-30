@@ -237,7 +237,7 @@ elif opciones == "Primeros pasos en Python":
     
     st.divider() ## Separador
     
-    # st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.markdown(f"Muestra en pantalla el texto que recibe como argumento. Funciona con texto y también con números.")
     st.code("""
         print('¡Hola Mundo!')
@@ -267,7 +267,7 @@ elif opciones == "Primeros pasos en Python":
     
     st.divider()
     
-    st.markdown("### 🅰️ Ejemplo A · `sep='\\n'`, `end='\\t'`")
+    st.markdown("### Ejemplo 🅰️ `sep='\\n'`, `end='\\t'`")
     
     st.code("""
     print("Mundial", 2026, sep="\\n", end="\\t")
@@ -276,14 +276,13 @@ elif opciones == "Primeros pasos en Python":
     
     st.markdown("**Salida:**")
     
-    st.success("""
+    st.code("""
     Mundial
-    2026    hola
-    """)
+    2026    hola""")
     
     st.divider()
     
-    st.markdown("### 🅱️ Ejemplo B · `sep='\\t'`, `end='\\n'`")
+    st.markdown("### Ejemplo 🅱️ `sep='\\t'`, `end='\\n'`")
     
     st.code("""
     print("Mundial", 2026, sep="\\t", end="\\n")
@@ -294,8 +293,7 @@ elif opciones == "Primeros pasos en Python":
     
     st.code("""
     Mundial    2026
-    hola
-    """)
+    hola """)
     
     st.divider() ## Separador
     
