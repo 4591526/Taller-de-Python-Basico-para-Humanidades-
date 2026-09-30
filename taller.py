@@ -239,25 +239,67 @@ elif opciones == "Primeros pasos en Python":
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.markdown(f"Muestra en pantalla el texto que recibe como argumento. Funciona con texto y también con números.")
-    st.code("""print('¡Hola Mundo!')
-        print(2026) """, language='python')
+    st.code("""
+        print('¡Hola Mundo!')
+        print(2026)""", language='python')
     st.success("""
         ¡Hola Mundo!
         
         2026 """)
     
-    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
-    st.write("""
-    Usamos la función `print()` para mostrar el texto **"¡Hola Mundo!"** en la pantalla.
-    La función `print()` permite mostrar cadena de caracteres (string), números o resultados de operaciones.
+    st.info("""
+    **Sintaxis básica de print()**
     
-    **Nota:**  
-    Una función es un bloque de código que realiza una tarea específica.
-    Las funciones reciben entradas (*argumentos*) y producen salidas (*resultados*)
+    st.code("print(*args, sep=' ', end='\\n')", language="python")
     
-    En este caso, la **entrada** es `"¡Hola Mundo!"` y la **salida** es el mismo texto mostrado en pantalla.
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        with st.container(border=True):
+            st.markdown("### `sep`")
+            st.write("Separa los valores que se imprimen.")
+            st.code("sep=' '", language="python")
+    
+    with col2:
+        with st.container(border=True):
+            st.markdown("### `end`")
+            st.write("Se añade al final de lo que se imprime.")
+            st.code("end='\\n'", language="python")
     """)
+    st.divider()
+    
+    st.markdown("### 🅰️ Ejemplo A · `sep='\\n'`, `end='\\t'`")
+    
+    st.code("""
+    print("Mundial", 2026, sep="\\n", end="\\t")
+    print("hola")
+    """, language="python")
+    
+    st.markdown("**Salida:**")
+    
+    st.code("""
+    Mundial
+    2026    hola
+    """)
+    
+    st.divider()
+    
+    st.markdown("### 🅱️ Ejemplo B · `sep='\\t'`, `end='\\n'`")
+    
+    st.code("""
+    print("Mundial", 2026, sep="\\t", end="\\n")
+    print("hola")
+    """, language="python")
+    
+    st.markdown("**Salida:**")
+    
+    st.code("""
+    Mundial    2026
+    hola
+    """)
+    
     st.divider() ## Separador
+    
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
     st.markdown(f"Esta función permite consultar en la documentación de Python.")
