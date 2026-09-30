@@ -195,8 +195,6 @@ elif opciones == "Primeros pasos en Python":
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de celdas</h2>', unsafe_allow_html=True)
     
-    st.subheader("📓 ¿Cómo se ve un cuaderno de Colab?")
-
     with st.container(border=True):
     
         st.markdown("### 📄 Prueba.ipynb")
@@ -215,6 +213,14 @@ elif opciones == "Primeros pasos en Python":
         st.success("Hola mundo")
     
         st.caption("3 · Salida (output), resultado de la ejecución")
+
+    st.info("""
+        📝 **Nota**
+        
+        **Ejecutar:** `Ctrl + Enter`  
+        
+        **Guardar:** los cambios se guardan automáticamente en Google Drive.
+        """)
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
