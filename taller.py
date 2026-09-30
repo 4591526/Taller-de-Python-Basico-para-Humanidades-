@@ -86,41 +86,35 @@ if opciones == "Introducción":
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">🐍 Python en las Humanidades</h2>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
-    
     with col1:
         with st.container(border=True):
-            st.markdown("### Aa")
-            st.markdown("#### Análisis de textos y corpus")
-            st.write("Contar palabras, buscar patrones y comparar documentos.")
-    
+            st.markdown("### 📚")
+            st.markdown("#### Literatura")
+            st.write("Analizar palabras, personajes, temas y estilos de escritura.")
+
     with col2:
         with st.container(border=True):
-            st.markdown("### ⟳")
-            st.markdown("#### Automatización de tareas")
-            st.write("Repetir procesos manuales sin errores y en segundos.")
+            st.markdown("### 🗣️")
+            st.markdown("#### Lingüística")
+            st.write("Analizar corpus, comparar lenguas y encontrar patrones.")
     
     col3, col4 = st.columns(2)
     
     with col3:
         with st.container(border=True):
-            st.markdown("### ☰")
-            st.markdown("#### Bases de datos bibliográficas")
-            st.write("Organizar y consultar referencias y catálogos.")
+            st.markdown("### 🏺")
+            st.markdown("#### Arqueología")
+            st.write("Organizar datos, analizar materiales y trabajar con información espacial.")
     
     with col4:
         with st.container(border=True):
-            st.markdown("### ▤")
-            st.markdown("#### Procesamiento de encuestas")
-            st.write("Tabular respuestas y obtener resúmenes automáticos.")
-
-    st.divider()
+            st.markdown("### 🏛️")
+            st.markdown("#### Historia")
+            st.write("Procesar documentos, organizar datos y construir cronologías.")
     
-    st.markdown(
-        '<h2 style="font-size: 30px; text-align: center; color: #4E8A4E;">'
-        'Temas del taller 📚'
-        '</h2>',
-        unsafe_allow_html=True
-    )
+    st.divider()
+        
+    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E;">''Temas del taller 📚''</h2>',unsafe_allow_html=True)
 
     st.markdown("""
     1. **Primeros pasos en Python**
