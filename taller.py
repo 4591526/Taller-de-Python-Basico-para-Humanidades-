@@ -293,8 +293,62 @@ elif opciones == "Primeros pasos en Python":
     
     st.divider() ## Separador
     
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A"> Variables </h2>', unsafe_allow_html=True)
-    st.image("variable.png")
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A"> 🧩 Variables </h2>', unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image("variable.png", width = 1000)
+
+    st.write("""
+    En Python, una **variable** es un espacio donde almacenamos información (un valor) para poder usarla después en nuestro programa.
+    Para asignar un valor a una variable utilizamos el símbolo `=`
+
+    ### 📌 Reglas para nombrar variables
+    - Pueden contener letras, números y guiones bajos (`_`).  
+    - **No pueden comenzar con un número**.  
+    - **No pueden tener espacios**.  
+    - No deben usar **caracteres especiales** (como `@`, `#`, `!`, etc.).  
+    - No pueden ser **palabras reservadas de Python** (como `if`, `for`, `while`, etc.).  
+
+    Puedes revisar la lista completa aquí: [Palabras reservadas en Python](https://www.w3schools.com/python/python_ref_keywords.asp)
+    """, unsafe_allow_html=True)
+   
+    st.markdown("""
+    Explora cómo funcionan las variables en Python. Puedes escribir valores y ver cómo cambian.
+    """)
+    
+    # Input interactivo
+    nombre_variable = st.text_input("Escribe un nombre para tu variable:", value="animal")
+    valor_variable = st.text_input("Asigna un valor a tu variable:", value="perro")
+    
+    # Mostrar resultado dinámico
+    if nombre_variable:
+        st.markdown("### Resultado")
+        st.code(f"{nombre_variable} = '{valor_variable}'\nprint({nombre_variable})", language="python")
+        st.write("Salida:")
+        st.write(valor_variable)
+    
+    # Explicación de reasignación
+    st.markdown("### 🔁 Reasignación de variables")
+    
+    valor1 = st.text_input("Primer valor de la variable:", value="guau", key="v1")
+    valor2 = st.text_input("Nuevo valor de la variable:", value="sonido del perro", key="v2")
+    
+    st.code(f"""
+    perro = "{valor1}"
+    print(perro)
+    
+    perro = "{valor2}"
+    print(perro)
+    """, language="python")
+    
+    st.write("Salida:")
+    st.write(valor1)
+    st.write(valor2)
+    
+    st.info("""
+    💡 **Observa:** la variable guarda siempre el **último valor asignado**.
+    """)
     
     st.divider() ## Separador
     
