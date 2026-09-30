@@ -53,7 +53,7 @@ if opciones == "Introducción":
             st.caption("Lo que necesitamos para preparar el plato.")
     
     with col2:
-        st.markdown("<br><br>### →", unsafe_allow_html=True)
+        st.markdown("<br><br> →", unsafe_allow_html=True)
     
     with col3:
         with st.container(border=True):
@@ -78,7 +78,7 @@ if opciones == "Introducción":
             st.caption("Información que recibe el programa.")
     
     with col2:
-        st.markdown("<br><br>### →", unsafe_allow_html=True)
+        st.markdown("<br><br>→", unsafe_allow_html=True)
     
     with col3:
         with st.container(border=True):
@@ -92,31 +92,6 @@ if opciones == "Introducción":
         st.markdown("### 📤 Resultado")
         st.caption("Información que genera el programa.")
     
-    
-    st.subheader("🌐 En Streamlit")
-    
-    col1, col2, col3 = st.columns([1, 0.2, 1])
-    
-    with col1:
-        with st.container(border=True):
-            st.markdown("### 📥 Entrada")
-            st.caption("El usuario proporciona información.")
-    
-    with col2:
-        st.markdown("<br><br>### →", unsafe_allow_html=True)
-    
-    with col3:
-        with st.container(border=True):
-            st.markdown("### 🐍 Python")
-            st.caption("Se ejecutan las instrucciones.")
-    
-    st.markdown("<div style='text-align:center; font-size:30px;'>↓</div>",
-                unsafe_allow_html=True)
-    
-    with st.container(border=True):
-        st.markdown("### 🖥️ Aplicación")
-        st.caption("Streamlit muestra el resultado al usuario.")
-
     st.divider()
 
     st.markdown(
