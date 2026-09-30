@@ -37,6 +37,68 @@ if opciones == "Introducción":
 
     st.divider()
 
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Qué es la programación?</h2>', unsafe_allow_html=True)
+
+    st.markdown("""
+    Programar es dar **instrucciones precisas y ordenadas** a una computadora
+    para resolver un problema o automatizar una tarea. Igual que seguir una receta.
+    """)
+    
+    st.subheader("🍳 En la cocina")
+    
+    col1, col2, col3 = st.columns([1, 0.2, 1])
+    
+    with col1:
+        st.markdown("### 🥕 Ingredientes")
+    
+    with col2:
+        st.markdown("### →")
+    
+    with col3:
+        st.markdown("### 👨‍🍳 Seguir los pasos en orden")
+    
+    st.markdown("### ↓")
+    
+    st.markdown("### 🍽️ Plato terminado")
+    
+    
+    st.subheader("💻 En un programa")
+    
+    col1, col2, col3 = st.columns([1, 0.2, 1])
+    
+    with col1:
+        st.markdown("### 📥 Datos de entrada")
+    
+    with col2:
+        st.markdown("### →")
+    
+    with col3:
+        st.markdown("### ⚙️ Ejecutar las instrucciones")
+    
+    st.markdown("### ↓")
+    
+    st.markdown("### 📤 Resultado")
+    
+    
+    st.subheader("🌐 En Streamlit")
+    
+    col1, col2, col3 = st.columns([1, 0.2, 1])
+    
+    with col1:
+        st.markdown("### 📥 Datos de entrada del usuario")
+    
+    with col2:
+        st.markdown("### →")
+    
+    with col3:
+        st.markdown("### 🐍 Ejecutar las instrucciones de Python")
+    
+    st.markdown("### ↓")
+    
+    st.markdown("### 🖥️ Resultado mostrado en la aplicación")
+
+     st.divider()
+
     st.markdown(
         '<h2 style="font-size: 30px; text-align: center; color: #4E4E8A;">'
         'Temas del taller 📚'
