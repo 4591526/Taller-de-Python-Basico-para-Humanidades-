@@ -583,7 +583,7 @@ elif opciones == "Primeros pasos en Python":
                 # EJERCICIO 1
                 # ==================================================
     
-                st.subheader("🟢 Ejercicio 1 · Variables y tipos de datos")
+                st.subheader("🟢 Ejercicio 1 · Variables")
     
                 r1 = st.text_area(
                     "Crea tres variables: nombre (texto), edad (entero) y promedio (decimal)."
@@ -607,7 +607,7 @@ elif opciones == "Primeros pasos en Python":
     
                 st.subheader("🔵 Ejercicio 2 · Tipos de datos")
     
-                r2 = st.text_input(
+                r2 = st.text_area(
                     "Crea una variable llamada carrera con el valor 'Lingüística' "
                     "y muestra su tipo de dato usando type()."
                 )
@@ -626,7 +626,7 @@ elif opciones == "Primeros pasos en Python":
     
                 st.subheader("🟣 Ejercicio 3 · print()")
     
-                r3 = st.text_input(
+                r3 = st.text_area(
                     "Crea una variable llamada libro con el nombre de un libro "
                     "y muestra su contenido utilizando print()."
                 )
@@ -664,11 +664,9 @@ elif opciones == "Primeros pasos en Python":
     
                 st.subheader("🔴 Ejercicio 5 · Operadores aritméticos")
     
-                r5 = st.text_input(
+                r5 = st.text_area(
                     "Crea dos variables: a = 15 y b = 4. "
                     "Calcula su suma, resta, multiplicación y división."
-
-                    
                 )
     
                 if r5:
