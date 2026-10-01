@@ -361,6 +361,154 @@ elif opciones == "Primeros pasos en Python":
             st.write("Valor:", valor)
     
     st.divider() ## Separador
+
+    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">🧮 Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
+
+    # Explicación
+    st.markdown("""
+    Los <b>operadores aritméticos</b> permiten realizar operaciones matemáticas entre valores.
+    """, unsafe_allow_html=True)
+
+    # Tabla de operadores
+    operadores = {
+        "Operador": ["+", "-", "*", "/", "//", "%", "**"],
+        "Nombre": [
+            "Suma",
+            "Resta",
+            "Multiplicación",
+            "División",
+            "División entera",
+            "Módulo",
+            "Potencia"
+        ],
+        "Ejemplo": [
+            "3 + 2 → 5",
+            "3 - 2 → 1",
+            "3 * 2 → 6",
+            "3 / 2 → 1.5",
+            "3 // 2 → 1",
+            "3 % 2 → 1",
+            "3 ** 2 → 9"
+        ]
+    }
+
+    df_operadores = pd.DataFrame(operadores)
+    st.dataframe(df_operadores, use_container_width=True)
+
+    num1 = st.number_input("Ingresa el primer número:", value=10.0)
+    num2 = st.number_input("Ingresa el segundo número:", value=2.0)
+
+    operacion = st.selectbox(
+        "Elige una operación:",
+        ["+", "-", "*", "/", "//", "%", "**"]
+    )
+
+    if operacion == "+":
+        resultado = num1 + num2
+    elif operacion == "-":
+        resultado = num1 - num2
+    elif operacion == "*":
+        resultado = num1 * num2
+    elif operacion == "/":
+        resultado = num1 / num2 if num2 != 0 else "Error (división por cero)"
+    elif operacion == "//":
+        resultado = num1 // num2 if num2 != 0 else "Error (división por cero)"
+    elif operacion == "%":
+        resultado = num1 % num2 if num2 != 0 else "Error (división por cero)"
+    elif operacion == "**":
+        resultado = num1 ** num2
+
+    st.success(f"Resultado: {resultado}")
+
+    st.divider()
+
+    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">📝 Operadores de asignación en Python</h2>', unsafe_allow_html=True)
+    
+    # Explicación
+    st.markdown("""
+    Los <b>operadores de asignación</b> permiten asignar un valor a una variable
+    o actualizar su valor utilizando una operación matemática.
+    """, unsafe_allow_html=True)
+    
+    # Tabla de operadores
+    operadores = {
+        "Operador": ["=", "+=", "-=", "*=", "/=", "//=", "%=", "**="],
+        "Nombre": [
+            "Asignación",
+            "Suma y asignación",
+            "Resta y asignación",
+            "Multiplicación y asignación",
+            "División y asignación",
+            "División entera y asignación",
+            "Módulo y asignación",
+            "Potencia y asignación"
+        ],
+        "Ejemplo": [
+            "x = 10 → 10",
+            "x += 3 → 13",
+            "x -= 3 → 7",
+            "x *= 3 → 30",
+            "x /= 2 → 5.0",
+            "x //= 3 → 3",
+            "x %= 3 → 1",
+            "x **= 2 → 100"
+        ]
+    }
+    
+    df_operadores = pd.DataFrame(operadores)
+    
+    st.dataframe(
+        df_operadores,
+        use_container_width=True,
+        hide_index=True
+    )
+    
+    # Valores para la demostración
+    numero = st.number_input(
+        "Ingresa un número:",
+        value=10.0
+    )
+    
+    operacion = st.selectbox(
+        "Elige un operador de asignación:",
+        ["=", "+=", "-=", "*=", "/=", "//=", "%=", "**="]
+    )
+    
+    valor = st.number_input(
+        "Ingresa el valor de la operación:",
+        value=2.0
+    )
+    
+    # Aplicación del operador
+    resultado = numero
+    
+    if operacion == "=":
+        resultado = valor
+    
+    elif operacion == "+=":
+        resultado += valor
+    
+    elif operacion == "-=":
+        resultado -= valor
+    
+    elif operacion == "*=":
+        resultado *= valor
+    
+    elif operacion == "/=":
+        resultado = resultado / valor if valor != 0 else "Error (división por cero)"
+    
+    elif operacion == "//=":
+        resultado = resultado // valor if valor != 0 else "Error (división por cero)"
+    
+    elif operacion == "%=":
+        resultado = resultado % valor if valor != 0 else "Error (división por cero)"
+    
+    elif operacion == "**=":
+        resultado **= valor
+    
+    st.success(f"Resultado: {resultado}")
+
+    st.divider()
     
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
     st.code("print(Hola)", language="python")
