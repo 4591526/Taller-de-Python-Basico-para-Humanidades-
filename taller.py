@@ -666,9 +666,7 @@ elif opciones == "Primeros pasos en Python":
     
                 r5 = st.text_input(
                     "Crea dos variables: a = 15 y b = 4. "
-                    "Calcula su suma, resta, multiplicación y división.",
-                    height=150,
-                    placeholder="Escribe aquí tu código Python..."
+                    "Calcula su suma, resta, multiplicación y división."
                 )
     
                 if r5:
