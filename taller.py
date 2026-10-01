@@ -683,31 +683,7 @@ elif opciones == "Primeros pasos en Python":
                         st.warning(
                             "Debes utilizar 15, 4 y los operadores +, -, * y /."
                         )
-    
-                # ==================================================
-                # EJERCICIO 6
-                # ==================================================
-    
-                st.subheader("🟡 Ejercicio 6 · Operadores de asignación")
-    
-                r6 = st.text_area(
-                    "Crea una variable puntos = 10 y aumenta su valor en 5 "
-                    "utilizando +=. Después muestra el resultado."
-                )
-    
-                if r6:
-                    if (
-                        "puntos" in r6
-                        and "10" in r6
-                        and "+=" in r6
-                        and "print" in r6
-                    ):
-                        st.success("¡Correcto! Has utilizado += para actualizar la variable.")
-                    else:
-                        st.warning(
-                            "Debes crear puntos = 10, utilizar += y mostrar el resultado."
-                        )
-    
+                
                 st.divider()
     
                 # ==================================================
@@ -753,14 +729,7 @@ elif opciones == "Primeros pasos en Python":
     print(a * b)
     print(a / b)
     """, language="python")
-    
-                    st.markdown("**Ejercicio 6 · Operadores de asignación**")
-                    st.code("""
-    puntos = 10
-    puntos += 5
-    
-    print(puntos)
-    """, language="python")
+                    
     
             show_info()
                 
