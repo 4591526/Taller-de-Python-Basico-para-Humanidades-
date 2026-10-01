@@ -300,15 +300,14 @@ elif opciones == "Primeros pasos en Python":
         st.image("variable.png", width = 1000)
 
     st.write("""
-    En Python, una variable es un espacio donde almacenamos información (un valor o un dato) para poder usarla después en nuestro programa.
-    Para asignar un valor a una variable utilizamos el símbolo `=`
+    Una variable es un espacio donde se almacena información. La etiqueta es el nombre; el contenido es el valor.
 
     📌 **Reglas para nombrar variables:**
-    - Pueden contener letras, números y guiones bajos (`_`).  
-    - No pueden comenzar con un número.  
+    - Solo pueden contener letras, números y guiones bajos (`_`) 
+    - No pueden comenzar con un número
     - No pueden tener espacios.  
-    - No deben usar **caracteres especiales** (como `@`, `#`, `!`, etc.).  
-    - No pueden ser **palabras reservadas de Python** (como `if`, `for`, `while`, etc.).  
+    - No deben usar caracteres especiales (como `@`, `#`, `!`, etc.).  
+    - No pueden ser palabras reservadas de Python (como `if`, `for`, `while`, etc.).
 
     Puedes revisar la lista completa aquí: [Palabras reservadas en Python](https://www.w3schools.com/python/python_ref_keywords.asp)
     """, unsafe_allow_html=True)
@@ -341,7 +340,23 @@ elif opciones == "Primeros pasos en Python":
     
     st.write("Salida:")
     st.success(valor2)    
-    st.info("""**Observa:** la variable guarda siempre el **último valor asignado**.""")
+    st.info(""" **Observa:** la variable guarda siempre el último valor asignado.""")
+    
+    st.divider() ## Separador
+
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de datos en Python</h2>', unsafe_allow_html=True)
+
+    valor = st.text_input("Escribe un valor (ejemplo: 11, 3.14, 'Humanidades', True):")
+
+    if valor:
+        try:
+            evaluado = eval(valor)
+            st.success(f"Tipo de dato: {type(evaluado)}")
+            st.write("Valor interpretado:", evaluado)
+        except:
+            st.warning("No se pudo interpretar automáticamente. Se considera texto.")
+            st.write("Tipo de dato:", type(valor))
+            st.write("Valor:", valor)
     
     st.divider() ## Separador
     
