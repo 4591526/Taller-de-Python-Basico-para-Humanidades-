@@ -566,89 +566,203 @@ elif opciones == "Primeros pasos en Python":
 
     st.divider()
     
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
-    st.code("print(Hola)", language="python")
-    st.markdown(f"Esto genera un error porque faltan comillas.")
+    col1, col2, col3 = st.columns([1,2,1])
 
-    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
-    st.write("""
-    Este código produce un error.
-    Python interpreta **Hola** como una variable.
-    Pero como no existe, aparece un error: **NameError**
-    
-    **¿Cómo se corrige?**
-    Agregando comillas:
-    `print("Hola")`
-    
-    **Nota:**
-    Los errores son parte normal del proceso de programar.
-    Aprender a leer errores ayuda a entender Python, corregir código y mejorar como programador.
-    
-    **Observación:**
-    Los errores comunes son olvidar las comillas, olvidar las paréntesis, escribir mal una función y no indentar.
-    """)
-    st.write("")
+    with col2:
+    if st.button("Resolver ejercicios prácticos"):
 
-    col22, col23, col24 = st.columns([1,2,1])
+        @st.dialog("Ejercicios prácticos")
+        def show_info():
 
-    with col23:
-    
-        if st.button("Resolver algunos ejercicios prácticos"):
-        
-            @st.dialog("Ejercicios prácticos")
-            def show_info():
-                st.write("Escribe las respuestas como código Python:")
-    
-                st.divider()
-    
-                # Ejercicio 1
-                st.subheader("Ejercicio 1")
-    
-                r1 = st.text_input(
-                    "Escribe un programa que muestre tu apellido usando print():"
-                )
-    
-                if r1:
-                    if "print" in r1:
-                        st.success("Correcto. Estás usando print().")
-                    else:
-                        st.warning("Recuerda usar print()")
-    
-                # Ejercicio 2
-                st.subheader("Ejercicio 2")
-    
-                r2 = st.text_input(
-                    "Muestra el resultado de 20 + 26:"
-                )
-    
-                if r2:
-                    if "20" in r2 and "26" in r2:
-                        st.success("Bien. Estás usando los números correctos.")
-                    else:
-                        st.info("Verifica los valores.")
-    
-                # Ejercicio 3
-                st.subheader("Ejercicio 3")
-    
-                r3 = st.text_input(
-                    "Usa help() con la función type:"
-                )
-    
-                if r3:
-                    if "help" in r3 and "type" in r3:
-                        st.success("Correcto.")
-                    else:
-                        st.warning("La respuesta esperada es algo como: help(type)")
-    
-                st.divider()
-    
-                if st.button("Ver solución"):
-                    st.code("""
-                    print("Gomez")     
-                    print(20 + 26)
-                    help(type)
-                    """, language="python")
-            show_info()
+            st.write("Escribe las respuestas como código Python.")
+            st.caption("Intenta resolver cada ejercicio antes de revisar la solución.")
+
+            st.divider()
+
+            # ==================================================
+            # EJERCICIO 1
+            # ==================================================
+
+            st.subheader("🟢 Ejercicio 1 · Variables y tipos de datos")
+
+            r1 = st.text_area(
+                "Crea tres variables: nombre (texto), edad (entero) y promedio (decimal)."
+            )
+
+            if r1:
+                if (
+                    "nombre" in r1
+                    and "edad" in r1
+                    and "promedio" in r1
+                ):
+                    st.success("Bien. Has creado las tres variables.")
+                else:
+                    st.warning(
+                        "Debes crear las variables nombre, edad y promedio."
+                    )
+
+            # ==================================================
+            # EJERCICIO 2
+            # ==================================================
+
+            st.subheader("🔵 Ejercicio 2 · Tipos de datos")
+
+            r2 = st.text_input(
+                "Crea una variable llamada carrera con el valor 'Lingüística' "
+                "y muestra su tipo de dato usando type()."
+            )
+
+            if r2:
+                if "carrera" in r2 and "type" in r2:
+                    st.success("Correcto. Estás utilizando una variable y type().")
+                else:
+                    st.warning(
+                        "Recuerda crear la variable carrera y utilizar type()."
+                    )
+
+            # ==================================================
+            # EJERCICIO 3
+            # ==================================================
+
+            st.subheader("🟣 Ejercicio 3 · print()")
+
+            r3 = st.text_input(
+                "Crea una variable llamada libro con el nombre de un libro "
+                "y muestra su contenido utilizando print()."
+            )
+
+            if r3:
+                if "libro" in r3 and "print" in r3:
+                    st.success("Correcto. Estás usando una variable con print().")
+                else:
+                    st.warning(
+                        "Debes utilizar una variable llamada libro y print()."
+                    )
+
+            # ==================================================
+            # EJERCICIO 4
+            # ==================================================
+
+            st.subheader("🟠 Ejercicio 4 · input()")
+
+            r4 = st.text_area(
+                "Solicita al usuario su nombre y guarda la respuesta "
+                "en una variable llamada nombre."
+            )
+
+            if r4:
+                if "input" in r4 and "nombre" in r4:
+                    st.success("Correcto. Estás utilizando input().")
+                else:
+                    st.warning(
+                        "Recuerda utilizar input() y guardar el resultado en nombre."
+                    )
+
+            # ==================================================
+            # EJERCICIO 5
+            # ==================================================
+
+            st.subheader("🔴 Ejercicio 5 · Operadores aritméticos")
+
+            r5 = st.text_input(
+                "Crea dos variables: a = 15 y b = 4. "
+                "Calcula su suma, resta, multiplicación y división."
+            )
+
+            if r5:
+                if (
+                    "15" in r5
+                    and "4" in r5
+                    and "+" in r5
+                    and "-" in r5
+                    and "*" in r5
+                    and "/" in r5
+                ):
+                    st.success("Correcto. Has utilizado los cuatro operadores.")
+                else:
+                    st.warning(
+                        "Debes utilizar 15, 4 y los operadores +, -, * y /."
+                    )
+
+            # ==================================================
+            # EJERCICIO 6
+            # ==================================================
+
+            st.subheader("🟡 Ejercicio 6 · Operadores de asignación")
+
+            r6 = st.text_area(
+                "Crea una variable puntos = 10 y aumenta su valor en 5 "
+                "utilizando +=. Después muestra el resultado."
+            )
+
+            if r6:
+                if (
+                    "puntos" in r6
+                    and "10" in r6
+                    and "+=" in r6
+                    and "print" in r6
+                ):
+                    st.success("¡Correcto! Has utilizado += para actualizar la variable.")
+                else:
+                    st.warning(
+                        "Debes crear puntos = 10, utilizar += y mostrar el resultado."
+                    )
+
+            st.divider()
+
+            # ==================================================
+            # SOLUCIONES
+            # ==================================================
+
+            if st.button("Ver soluciones"):
+
+                st.markdown("### 💡 Soluciones")
+
+                st.markdown("**Ejercicio 1 · Variables y tipos de datos**")
+                st.code("""
+nombre = "Luisa"
+edad = 25
+promedio = 17.5
+""", language="python")
+
+                st.markdown("**Ejercicio 2 · Tipos de datos**")
+                st.code("""
+carrera = "Lingüística"
+print(type(carrera))
+""", language="python")
+
+                st.markdown("**Ejercicio 3 · print()**")
+                st.code("""
+libro = "El Aleph"
+print(libro)
+""", language="python")
+
+                st.markdown("**Ejercicio 4 · input()**")
+                st.code("""
+nombre = input("¿Cuál es tu nombre? ")
+print(nombre)
+""", language="python")
+
+                st.markdown("**Ejercicio 5 · Operadores aritméticos**")
+                st.code("""
+a = 15
+b = 4
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+""", language="python")
+
+                st.markdown("**Ejercicio 6 · Operadores de asignación**")
+                st.code("""
+puntos = 10
+puntos += 5
+
+print(puntos)
+""", language="python")
+
+        show_info()
             
 
 
