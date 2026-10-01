@@ -362,7 +362,7 @@ elif opciones == "Primeros pasos en Python":
     
     st.divider() ## Separador
 
-    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">🧮 Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">🧮 Operadores aritméticos</h2>', unsafe_allow_html=True)
 
     # Explicación
     st.markdown("""
@@ -422,7 +422,7 @@ elif opciones == "Primeros pasos en Python":
 
     st.divider()
 
-    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">📝 Operadores de asignación en Python</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">📝 Operadores de asignación</h2>', unsafe_allow_html=True)
     
     # Explicación
     st.markdown("""
@@ -507,6 +507,65 @@ elif opciones == "Primeros pasos en Python":
         resultado **= valor
     
     st.success(f"Resultado: {resultado}")
+
+    st.divider()
+
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">⌨️ input() en Python</h2>',unsafe_allow_html=True)
+    
+    # Explicación
+    st.markdown("""
+    La función <b>input()</b> permite solicitar información al usuario
+    durante la ejecución de un programa.
+    """, unsafe_allow_html=True)
+    
+    # Tabla explicativa
+    conceptos = {
+        "Elemento": [
+            "input()",
+            "Mensaje",
+            "Variable",
+            "str",
+            "int",
+            "float"
+        ],
+        "Función": [
+            "Solicita un dato al usuario",
+            "Indica qué información ingresar",
+            "Guarda el dato ingresado",
+            "Convierte el dato a texto",
+            "Convierte el dato a número entero",
+            "Convierte el dato a número decimal"
+        ],
+        "Ejemplo": [
+            "input()",
+            'input("¿Cuál es tu nombre? ")',
+            'nombre = input("Nombre: ")',
+            'nombre = str(input("Nombre: "))',
+            'edad = int(input("Edad: "))',
+            'precio = float(input("Precio: "))'
+        ]
+    }
+    
+    df_input = pd.DataFrame(conceptos)
+    
+    st.dataframe(
+        df_input,
+        use_container_width=True,
+        hide_index=True
+    )
+    
+    nombre = st.text_input("¿Cuál es tu nombre?")
+    
+    edad = st.number_input(
+        "¿Cuál es tu edad?",
+        min_value=0,
+        max_value=120,
+        value=20,
+        step=1
+    )
+    
+    if nombre:
+        st.success(f"Hola, {nombre}. Tienes {edad} años.")
 
     st.divider()
     
