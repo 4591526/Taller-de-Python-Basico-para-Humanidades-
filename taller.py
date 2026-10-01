@@ -566,7 +566,7 @@ elif opciones == "Primeros pasos en Python":
 
     st.divider()
     
-    col1, col2, col3 = st.columns([1,3,1])
+    col1, col2, col3 = st.columns(3)
 
     with col2:
         if st.button("Resolver ejercicios prácticos"):
