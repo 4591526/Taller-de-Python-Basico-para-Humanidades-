@@ -345,6 +345,9 @@ elif opciones == "Primeros pasos en Python":
     st.divider() ## Separador
 
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Tipos de datos en Python</h2>', unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image("tipo_dato.png", width = 1000)
 
     valor = st.text_input("Escribe un valor (ejemplo: 11, 3.14, 'Humanidades', True):")
 
@@ -352,7 +355,6 @@ elif opciones == "Primeros pasos en Python":
         try:
             evaluado = eval(valor)
             st.success(f"Tipo de dato: {type(evaluado)}")
-            st.write("Valor interpretado:", evaluado)
         except:
             st.warning("No se pudo interpretar automáticamente. Se considera texto.")
             st.write("Tipo de dato:", type(valor))
