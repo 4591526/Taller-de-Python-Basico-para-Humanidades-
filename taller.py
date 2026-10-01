@@ -300,13 +300,13 @@ elif opciones == "Primeros pasos en Python":
         st.image("variable.png", width = 1000)
 
     st.write("""
-    En Python, una **variable** es un espacio donde almacenamos información (un valor o un dato) para poder usarla después en nuestro programa.
+    En Python, una variable es un espacio donde almacenamos información (un valor o un dato) para poder usarla después en nuestro programa.
     Para asignar un valor a una variable utilizamos el símbolo `=`
 
-    📌 Reglas para nombrar variables
+    📌 **Reglas para nombrar variables:**
     - Pueden contener letras, números y guiones bajos (`_`).  
-    - **No pueden comenzar con un número**.  
-    - **No pueden tener espacios**.  
+    - No pueden comenzar con un número.  
+    - No pueden tener espacios.  
     - No deben usar **caracteres especiales** (como `@`, `#`, `!`, etc.).  
     - No pueden ser **palabras reservadas de Python** (como `if`, `for`, `while`, etc.).  
 
@@ -340,8 +340,7 @@ elif opciones == "Primeros pasos en Python":
     """, language="python")
     
     st.write("Salida:")
-    st.success(""" valor1
-                valor 2""")    
+    st.success(valor2)    
     st.info("""**Observa:** la variable guarda siempre el **último valor asignado**.""")
     
     st.divider() ## Separador
