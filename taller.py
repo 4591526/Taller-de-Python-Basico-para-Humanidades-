@@ -510,7 +510,7 @@ elif opciones == "Primeros pasos en Python":
 
     st.divider()
 
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">⌨️ input() en Python</h2>',unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">⌨️ input() </h2>',unsafe_allow_html=True)
     
     # Explicación
     st.markdown("""
@@ -524,7 +524,6 @@ elif opciones == "Primeros pasos en Python":
             "input()",
             "Mensaje",
             "Variable",
-            "str",
             "int",
             "float"
         ],
@@ -532,7 +531,6 @@ elif opciones == "Primeros pasos en Python":
             "Solicita un dato al usuario",
             "Indica qué información ingresar",
             "Guarda el dato ingresado",
-            "Convierte el dato a texto",
             "Convierte el dato a número entero",
             "Convierte el dato a número decimal"
         ],
@@ -540,7 +538,6 @@ elif opciones == "Primeros pasos en Python":
             "input()",
             'input("¿Cuál es tu nombre? ")',
             'nombre = input("Nombre: ")',
-            'nombre = str(input("Nombre: "))',
             'edad = int(input("Edad: "))',
             'precio = float(input("Precio: "))'
         ]
