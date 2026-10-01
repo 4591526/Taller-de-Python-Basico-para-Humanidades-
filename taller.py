@@ -340,9 +340,8 @@ elif opciones == "Primeros pasos en Python":
     """, language="python")
     
     st.write("Salida:")
-    st.success(valor1)
-    st.success(valor2)
-    
+    st.success(""" valor1
+                valor 2""")    
     st.info("""**Observa:** la variable guarda siempre el **último valor asignado**.""")
     
     st.divider() ## Separador
