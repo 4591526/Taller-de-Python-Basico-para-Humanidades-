@@ -575,7 +575,6 @@ elif opciones == "Primeros pasos en Python":
             def show_info():
     
                 st.write("Escribe las respuestas como código Python.")
-                st.caption("Intenta resolver cada ejercicio antes de revisar la solución.")
     
                 st.divider()
     
