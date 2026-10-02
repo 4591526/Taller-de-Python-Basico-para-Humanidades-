@@ -246,50 +246,6 @@ elif opciones == "Primeros pasos en Python":
         ¡Hola Mundo!
         
         2026 """)
-
-    st.markdown(f'<h3 style="text-align: center; color: #7f3213">Sintaxis básica</h3>', unsafe_allow_html=True)
-
-    st.code("print(*args, sep=' ', end='\\n')", language="python")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        with st.container(border=True):
-            st.markdown("### `sep`")
-            st.write("Separa los valores que se imprimen.")
-            st.code("sep=' '", language="python")
-    
-    with col2:
-        with st.container(border=True):
-            st.markdown("### `end`")
-            st.write("Se añade al final de lo que se imprime.")
-            st.code("end='\\n'", language="python")
-   
-    st.markdown("### Ejemplo 🅰️ `sep='\\n'`, `end='\\t'`")
-    
-    st.code("""
-    print("Mundial", 2026, sep="\\n", end="\\t")
-    print("hola")
-    """, language="python")
-    
-    st.markdown("**Salida:**")
-    
-    st.code("""
-    Mundial
-    2026    hola""")
-    
-    st.markdown("### Ejemplo 🅱️ `sep='\\t'`, `end='\\n'`")
-    
-    st.code("""
-    print("Mundial", 2026, sep="\\t", end="\\n")
-    print("hola")
-    """, language="python")
-    
-    st.markdown("**Salida:**")
-    
-    st.code("""
-    Mundial    2026
-    hola """)
     
     st.divider() ## Separador
     
