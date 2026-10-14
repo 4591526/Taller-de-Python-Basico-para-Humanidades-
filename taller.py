@@ -851,9 +851,87 @@ with st.container(border=True):
         
         st.divider()   
 
-
-
-
-
-
-
+        st.markdown(
+            f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
+            f'Estructura f-string</h2>',
+            unsafe_allow_html=True
+        )
+        
+        with st.container(border=True):
+        
+            st.markdown("### 🧩 Insertar variables en una cadena")
+        
+            st.markdown("**1. Estructura básica**")
+            st.code(
+                'nombre = "María"\n'
+                'print(f"Hola, {nombre}")',
+                language="python"
+            )
+            st.caption(
+                "La letra f antes de las comillas permite insertar "
+                "variables dentro de una cadena. Las variables se escriben "
+                "entre llaves {}."
+            )
+            st.success("Hola, María")
+        
+            st.divider()
+        
+            st.markdown("**2. Insertar varias variables**")
+            st.code(
+                'lengua = "quechua"\n'
+                'familia = "quechumara"\n'
+                'print(f"La lengua {lengua} pertenece a la familia {familia}.")',
+                language="python"
+            )
+            st.caption(
+                "Puedes incluir varias variables en una misma cadena "
+                "para construir mensajes personalizados."
+            )
+            st.success("La lengua quechua pertenece a la familia quechumara.")
+        
+            st.divider()
+        
+            st.markdown("**3. Insertar operaciones y funciones**")
+            st.code(
+                'palabra = "lingüística"\n'
+                'print(f"La palabra tiene {len(palabra)} caracteres.")',
+                language="python"
+            )
+            st.caption(
+                "Dentro de las llaves también puedes ejecutar operaciones "
+                "o llamar funciones."
+            )
+            st.success("La palabra tiene 11 caracteres.")
+        
+            st.divider()
+        
+            st.markdown("**4. Combinar texto y números**")
+            st.code(
+                'libro = "El principito"\n'
+                'paginas = 96\n'
+                'print(f"El libro {libro} tiene {paginas} páginas.")',
+                language="python"
+            )
+            st.caption(
+                "Las f-strings permiten combinar variables de distintos "
+                "tipos de datos en un mismo mensaje."
+            )
+            st.success("El libro El principito tiene 96 páginas.")
+        
+            st.info("""
+                📝 **Nota**
+            
+                **Estructura:** `f"Texto {variable}"`
+            
+                - La letra `f` se coloca antes de las comillas.
+                - Las llaves `{}` indican dónde se inserta una variable o expresión.
+                - El resultado es una cadena de caracteres (`str`).
+                """)
+            
+            st.divider()
+        
+        
+        
+        
+        
+        
