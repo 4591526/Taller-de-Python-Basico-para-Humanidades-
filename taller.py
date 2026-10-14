@@ -704,7 +704,7 @@ elif opciones == "Cadenas, listas y operadores":
     
     st.markdown(
     f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
-    f'Métodos básicos de cadenas de caracteres</h2>',
+    f'Métodos de cadenas de caracteres</h2>',
     unsafe_allow_html=True
     )
     
@@ -931,7 +931,7 @@ elif opciones == "Cadenas, listas y operadores":
         
     st.markdown(
         f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
-        f'Listas y sus métodos</h2>',
+        f'Métodos de cadenas de listas</h2>',
         unsafe_allow_html=True
     )
     
