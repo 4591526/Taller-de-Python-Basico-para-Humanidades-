@@ -18,7 +18,7 @@ opciones = option_menu(
     options=opciones_menu,
     icons=['0-circle','1-circle', 'alphabet', 'list', 'calculator'],
     menu_icon="cast",
-    default_index=0,
+    default_index=1,
     orientation="horizontal"
 )
 
