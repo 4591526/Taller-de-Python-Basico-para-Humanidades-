@@ -11,12 +11,12 @@ st.set_page_config(
     layout="wide"
 )
 
-opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas de caracteres", "Listas", "Operadores"]
+opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas, listas y operadores", "Bucles", "Librerias"]
 
 opciones = option_menu(
     menu_title=None,
     options=opciones_menu,
-    icons=['0-circle','1-circle', 'alphabet', 'list', 'calculator'],
+    icons=['0-circle','1-circle', '2-circle', '3-circle', '4-circle'],
     menu_icon="cast",
     default_index=1,
     orientation="horizontal"
@@ -688,7 +688,19 @@ elif opciones == "Primeros pasos en Python":
     
             show_info()
                 
+    elif opciones == "Cadenas, listas y operadores":
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Cadenas, listas y operadores</h2>', unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.link_button(
+            "📓 Colab - Clase 2",
+            "https://colab.research.google.com/drive/1ipCmJfSsJDIDmS6MdO9Fls3Rif4a3kxU",
+            use_container_width=True
+        )
     
+    st.divider() ## Separador
     
        
        
