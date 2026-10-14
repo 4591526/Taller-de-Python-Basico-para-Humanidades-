@@ -777,7 +777,7 @@ elif opciones == "Cadenas, listas y operadores":
         )
         st.success("LINGÜÍSTICA")
     
-        st.info("""
+    st.info("""
             📝 **Nota**
         
             **`split()`** devuelve una lista de elementos.  
@@ -786,9 +786,9 @@ elif opciones == "Cadenas, listas y operadores":
         
             Estos métodos no modifican la cadena original: devuelven un nuevo resultado.
             """)
-    
-    st.divider()   
-       
+              
+    st.divider()
+              
     st.markdown(
     f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
     f'Función len()</h2>',
@@ -839,7 +839,7 @@ elif opciones == "Cadenas, listas y operadores":
         )
         st.success("10")
     
-        st.info("""
+    st.info("""
             📝 **Nota**
         
             **`len()`** devuelve un número entero (`int`).
@@ -849,6 +849,8 @@ elif opciones == "Cadenas, listas y operadores":
             - Los espacios también cuentan como caracteres.
             """)  
 
+    st.divider()
+              
     st.markdown(
             f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
             f'Estructura f-string</h2>',
