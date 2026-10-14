@@ -789,7 +789,67 @@ with st.container(border=True):
     
     st.divider()   
        
-       
+    st.markdown(
+    f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
+    f'Función len()</h2>',
+    unsafe_allow_html=True
+)
+
+with st.container(border=True):
+
+    st.markdown("### 🔢 Contar elementos")
+
+    st.markdown("**1. Contar caracteres de una cadena**")
+    st.code(
+        'texto = "Lingüística"\n'
+        'print(len(texto))',
+        language="python"
+    )
+    st.caption(
+        "La función len() devuelve la cantidad de caracteres "
+        "que contiene una cadena, incluidos los espacios."
+    )
+    st.success("11")
+
+    st.divider()
+
+    st.markdown("**2. Contar elementos de una lista**")
+    st.code(
+        'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+        'print(len(lenguas))',
+        language="python"
+    )
+    st.caption(
+        "También permite conocer la cantidad de elementos "
+        "que contiene una lista."
+    )
+    st.success("3")
+
+    st.divider()
+
+    st.markdown("**3. Contar caracteres, incluidos los espacios**")
+    st.code(
+        'frase = "Hola mundo"\n'
+        'print(len(frase))',
+        language="python"
+    )
+    st.caption(
+        "Cada letra y el espacio entre las palabras cuentan "
+        "como un carácter."
+    )
+    st.success("10")
+
+    st.info("""
+        📝 **Nota**
+    
+        **`len()`** devuelve un número entero (`int`).
+    
+        - En una cadena, cuenta caracteres.
+        - En una lista, cuenta elementos.
+        - Los espacios también cuentan como caracteres.
+        """)
+    
+    st.divider()   
 
 
 
