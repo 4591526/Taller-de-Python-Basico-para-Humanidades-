@@ -849,9 +849,9 @@ elif opciones == "Cadenas, listas y operadores":
             - Los espacios también cuentan como caracteres.
             """)
         
-        st.divider()   
+    st.divider()   
 
-        st.markdown(
+    st.markdown(
             f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
             f'Estructura f-string</h2>',
             unsafe_allow_html=True
@@ -928,7 +928,7 @@ elif opciones == "Cadenas, listas y operadores":
                 - El resultado es una cadena de caracteres (`str`).
                 """)
             
-            st.divider()
+    st.divider()
         
         
         
