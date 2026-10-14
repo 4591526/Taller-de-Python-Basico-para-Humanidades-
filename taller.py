@@ -917,7 +917,7 @@ elif opciones == "Cadenas, listas y operadores":
             )
         st.success("El libro El principito tiene 96 páginas.")
         
-        st.info("""
+    st.info("""
                 📝 **Nota**
             
                 **Estructura:** `f"Texto {variable}"`
