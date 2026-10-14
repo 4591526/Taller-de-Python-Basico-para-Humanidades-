@@ -931,7 +931,7 @@ elif opciones == "Cadenas, listas y operadores":
         
     st.markdown(
         f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
-        f'Métodos de cadenas de listas</h2>',
+        f'Métodos de listas</h2>',
         unsafe_allow_html=True
     )
     
@@ -1051,6 +1051,100 @@ elif opciones == "Cadenas, listas y operadores":
     
     st.divider()    
         
-        
+    st.markdown(
+        f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
+        f'Operadores booleanos</h2>',
+        unsafe_allow_html=True
+    )
+    
+    with st.container(border=True):
+    
+        st.markdown("### ⚖️ 1. Operadores comparativos")
+    
+        st.markdown("**Comparar valores**")
+        st.code(
+            'edad = 20\n'
+            'print(edad == 20)\n'
+            'print(edad != 18)\n'
+            'print(edad > 18)\n'
+            'print(edad < 25)\n'
+            'print(edad >= 20)\n'
+            'print(edad <= 19)',
+            language="python"
+        )
+        st.caption("Comparan dos valores y devuelven True o False.")
+        st.success("True\nTrue\nTrue\nTrue\nTrue\nFalse")
+    
+        st.markdown("""
+        | Operador | Significado |
+        |---|---|
+        | `==` | Igual a |
+        | `!=` | Diferente de |
+        | `>` | Mayor que |
+        | `<` | Menor que |
+        | `>=` | Mayor o igual que |
+        | `<=` | Menor o igual que |
+        """)
+    
+        st.divider()
+    
+        st.markdown("### 🔎 2. Operadores de pertenencia")
+    
+        st.markdown("**Comprobar si un elemento pertenece a una colección**")
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            'print("quechua" in lenguas)\n'
+            'print("shipibo-konibo" not in lenguas)',
+            language="python"
+        )
+        st.caption("Comprueban si un elemento está presente o ausente en una colección.")
+        st.success("True\nTrue")
+    
+        st.markdown("""
+        | Operador | Significado |
+        |---|---|
+        | `in` | Pertenece a |
+        | `not in` | No pertenece a |
+        """)
+    
+        st.divider()
+    
+        st.markdown("### 🧠 3. Operadores lógicos")
+    
+        st.markdown("**Combinar condiciones**")
+        st.code(
+            'edad = 22\n'
+            'estudiante = True\n'
+            'print(edad >= 18 and estudiante)\n'
+            'print(edad < 18 or estudiante)\n'
+            'print(not estudiante)',
+            language="python"
+        )
+        st.caption("Permiten combinar o negar expresiones que producen valores booleanos.")
+        st.success("True\nTrue\nFalse")
+    
+        st.markdown("""
+        | Operador | Significado |
+        |---|---|
+        | `and` | True si ambas condiciones son verdaderas |
+        | `or` | True si al menos una condición es verdadera |
+        | `not` | Invierte el valor lógico |
+        """)
+
+    st.info("""
+        📝 **Nota**
+    
+        Los valores booleanos son `True` y `False`.
+    
+        - Los operadores comparativos comparan valores.
+        - Los operadores de pertenencia verifican si un elemento está en una colección.
+        - Los operadores lógicos combinan o niegan condiciones.
+    
+        Estos operadores son fundamentales para construir condiciones con
+        `if`, `elif` y `else`.
+        """)
+    
+    st.divider()
+   
         
         
