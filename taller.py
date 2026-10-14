@@ -929,7 +929,127 @@ elif opciones == "Cadenas, listas y operadores":
             
     st.divider()
         
-        
+    st.markdown(
+        f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
+        f'Listas y sus métodos</h2>',
+        unsafe_allow_html=True
+    )
+    
+    with st.container(border=True):
+    
+        st.markdown("### 📚 Métodos para trabajar con listas")
+    
+        st.markdown("**1. `append()` — Agregar un elemento**")
+        st.code(
+            'lenguas = ["quechua", "aimara"]\n'
+            'lenguas.append("shipibo-konibo")\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Agrega un elemento al final de la lista.")
+        st.success("['quechua', 'aimara', 'shipibo-konibo']")
+    
+        st.divider()
+    
+        st.markdown("**2. `extend()` — Agregar varios elementos**")
+        st.code(
+            'lenguas = ["quechua", "aimara"]\n'
+            'lenguas.extend(["ashaninka", "awajún"])\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Agrega los elementos de otra colección al final de la lista.")
+        st.success("['quechua', 'aimara', 'ashaninka', 'awajún']")
+    
+        st.divider()
+    
+        st.markdown("**3. `insert()` — Insertar un elemento**")
+        st.code(
+            'lenguas = ["quechua", "aimara"]\n'
+            'lenguas.insert(1, "ashaninka")\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Inserta un elemento en la posición indicada. La primera posición es 0.")
+        st.success("['quechua', 'ashaninka', 'aimara']")
+    
+        st.divider()
+    
+        st.markdown("**4. `remove()` — Eliminar un elemento**")
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            'lenguas.remove("aimara")\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Elimina la primera aparición del valor indicado.")
+        st.success("['quechua', 'ashaninka']")
+    
+        st.divider()
+    
+        st.markdown("**5. `pop()` — Eliminar por posición**")
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            'eliminada = lenguas.pop(1)\n'
+            'print(eliminada)\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Elimina y devuelve el elemento de la posición indicada. Sin argumento, elimina el último.")
+        st.success("aimara\n['quechua', 'ashaninka']")
+    
+        st.divider()
+    
+        st.markdown("**6. `index()` — Encontrar la posición**")
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            'print(lenguas.index("aimara"))',
+            language="python"
+        )
+        st.caption("Devuelve el índice de la primera aparición del elemento.")
+        st.success("1")
+    
+        st.divider()
+    
+        st.markdown("**7. `sort()` — Ordenar elementos**")
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            'lenguas.sort()\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Ordena la lista en orden ascendente. En cadenas, el orden es alfabético según los valores Unicode.")
+        st.success("['aimara', 'ashaninka', 'quechua']")
+    
+        st.divider()
+    
+        st.markdown("**8. `reverse()` — Invertir el orden**")
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            'lenguas.reverse()\n'
+            'print(lenguas)',
+            language="python"
+        )
+        st.caption("Invierte el orden actual de los elementos, sin ordenarlos alfabéticamente.")
+        st.success("['ashaninka', 'aimara', 'quechua']")
+
+    st.info("""
+        📝 **Nota**
+    
+        - `append()` agrega un elemento.
+        - `extend()` agrega varios elementos.
+        - `insert()` inserta en una posición específica.
+        - `remove()` elimina por valor.
+        - `pop()` elimina por posición y devuelve el elemento.
+        - `index()` encuentra la posición de un valor.
+        - `sort()` ordena la lista.
+        - `reverse()` invierte el orden actual.
+    
+        **Importante:** la mayoría de estos métodos modifica la lista original.
+        `index()` devuelve un número entero y `pop()` devuelve el elemento eliminado.
+        """)
+    
+    st.divider()    
         
         
         
