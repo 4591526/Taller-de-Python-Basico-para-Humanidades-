@@ -688,7 +688,7 @@ elif opciones == "Primeros pasos en Python":
     
             show_info()
                 
-    elif opciones == "Cadenas, listas y operadores":
+elif opciones == "Cadenas, listas y operadores":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Cadenas, listas y operadores</h2>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([1, 2, 1])
