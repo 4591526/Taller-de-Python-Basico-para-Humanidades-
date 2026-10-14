@@ -702,7 +702,92 @@ elif opciones == "Cadenas, listas y operadores":
     
     st.divider() ## Separador
     
-       
+    st.markdown(
+    f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">'
+    f'Métodos básicos de cadenas de caracteres</h2>',
+    unsafe_allow_html=True
+)
+
+with st.container(border=True):
+
+    st.markdown("### 🔤 Métodos para trabajar con texto")
+
+    st.markdown("**1. `split()` — Dividir una cadena**")
+    st.code(
+        'texto = "historia arqueología lingüística"\n'
+        'print(texto.split())',
+        language="python"
+    )
+    st.caption(
+        "Divide una cadena de caracteres en una lista de palabras. "
+        "Por defecto, utiliza los espacios como separadores."
+    )
+    st.success("['historia', 'arqueología', 'lingüística']")
+
+    st.divider()
+
+    st.markdown("**2. `count()` — Contar apariciones**")
+    st.code(
+        'texto = "lingüística"\n'
+        'print(texto.count("i"))',
+        language="python"
+    )
+    st.caption(
+        "Cuenta cuántas veces aparece un carácter o una secuencia "
+        "de caracteres dentro de una cadena."
+    )
+    st.success("3")
+
+    st.divider()
+
+    st.markdown("**3. `replace()` — Reemplazar texto**")
+    st.code(
+        'texto = "Me gusta la historia"\n'
+        'print(texto.replace("historia", "arqueología"))',
+        language="python"
+    )
+    st.caption(
+        "Reemplaza una palabra o secuencia de caracteres por otra."
+    )
+    st.success("Me gusta la arqueología")
+
+    st.divider()
+
+    st.markdown("**4. `lower()` — Convertir a minúsculas**")
+    st.code(
+        'texto = "LINGÜÍSTICA"\n'
+        'print(texto.lower())',
+        language="python"
+    )
+    st.caption(
+        "Convierte todas las letras de una cadena a minúsculas."
+    )
+    st.success("lingüística")
+
+    st.divider()
+
+    st.markdown("**5. `upper()` — Convertir a mayúsculas**")
+    st.code(
+        'texto = "lingüística"\n'
+        'print(texto.upper())',
+        language="python"
+    )
+    st.caption(
+        "Convierte todas las letras de una cadena a mayúsculas."
+    )
+    st.success("LINGÜÍSTICA")
+
+    st.info("""
+        📝 **Nota**
+    
+        **`split()`** devuelve una lista de elementos.  
+        **`count()`** devuelve un número entero.  
+        **`replace()`**, **`lower()`** y **`upper()`** devuelven cadenas de caracteres.
+    
+        Estos métodos no modifican la cadena original: devuelven un nuevo resultado.
+        """)
+    
+    st.divider()   
        
        
 
