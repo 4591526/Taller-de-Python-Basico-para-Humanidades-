@@ -1148,5 +1148,14 @@ elif opciones == "Cadenas, listas y operadores":
 
 elif opciones == "Condicionales, bucles y funciones":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Condicionales, bucles y funciones</h2>', unsafe_allow_html=True)
-        
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.link_button(
+            "📓 Colab - Clase 3",
+            "https://colab.research.google.com/drive/1hdtjOicT18q5RPZj8tmK-OWtbBPw0e-e#scrollTo=yrj7KP2I7cx5",
+            use_container_width=True
+        )
+    
+    st.divider() ## Separador
         
