@@ -11,14 +11,14 @@ st.set_page_config(
     layout="wide"
 )
 
-opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas, listas y operadores", "Bucles", "Librerias"]
+opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas, listas y operadores", "Condicionales, bucles y funciones", "Librerias"]
 
 opciones = option_menu(
     menu_title=None,
     options=opciones_menu,
     icons=['0-circle','1-circle', '2-circle', '3-circle', '4-circle'],
     menu_icon="cast",
-    default_index=1,
+    default_index=2,
     orientation="horizontal"
 )
 
@@ -1145,6 +1145,8 @@ elif opciones == "Cadenas, listas y operadores":
         """)
     
     st.divider()
-   
+
+elif opciones == "Condicionales, bucles y funciones":
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Condicionales, bucles y funciones</h2>', unsafe_allow_html=True)
         
         
