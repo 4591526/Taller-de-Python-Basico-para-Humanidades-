@@ -1274,6 +1274,67 @@ elif opciones == "Condicionales, bucles y funciones":
 
     st.divider()
 
-    st.markdown("### 🔹 4. Estructuras selectivas anidadas `if-if`")
+     st.markdown("### 🔹 4. Estructuras selectivas anidadas `if-if`")
 
-    st.markdown("**Evaluar una condición dentro de
+    st.markdown("**Evaluar una condición dentro de otra estructura condicional**")
+
+    st.code(
+        'edad = 25\n'
+        'tiene_entrada = True\n'
+        '\n'
+        'if edad >= 18:\n'
+        '    print("Cumple la edad requerida")\n'
+        '    if tiene_entrada:\n'
+        '        print("Puede ingresar")',
+        language="python"
+    )
+
+    st.caption(
+        "Un segundo `if` se encuentra dentro del bloque de otro `if`. "
+        "La segunda condición solo se evalúa si se ejecuta el bloque externo."
+    )
+
+    st.success(
+        "Cumple la edad requerida\n"
+        "Puede ingresar"
+    )
+
+    st.markdown("""
+    | Elemento | Función |
+    |---|---|
+    | `if` externo | Comprueba la primera condición. |
+    | `if` interno | Comprueba una segunda condición dentro del primer bloque. |
+    | Indentación | Permite identificar la relación entre ambos bloques. |
+    """)
+
+    st.info("""
+    📝 **Nota**
+
+    La estructura `if-if` corresponde a una forma de condicionales anidados.
+    Se pueden anidar varias estructuras `if` cuando una decisión depende
+    de otra.
+    """)
+
+    st.divider()
+
+    st.markdown("### 📌 Resumen de las estructuras selectivas")
+
+    st.markdown("""
+    | Estructura | Funcionamiento |
+    |---|---|
+    | `if` | Ejecuta instrucciones si se cumple una condición. |
+    | `if-else` | Selecciona una de dos alternativas. |
+    | `if-elif-else` | Selecciona entre varias alternativas. |
+    | `if-if` | Evalúa una condición dentro de otra. |
+    """)
+
+    st.info("""
+    💡 **Recuerda**
+
+    - Las condiciones suelen utilizar operadores comparativos y lógicos.
+    - La indentación define qué instrucciones pertenecen a cada bloque.
+    - Los dos puntos (`:`) son obligatorios al finalizar la cabecera de
+      cada estructura condicional.
+    - Las estructuras selectivas permiten controlar el flujo de ejecución
+      de un programa según las condiciones establecidas.
+    """)
