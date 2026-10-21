@@ -1158,4 +1158,122 @@ elif opciones == "Condicionales, bucles y funciones":
         )
     
     st.divider() ## Separador
-        
+
+    with st.container(border=True):
+
+    st.markdown("### 🔹 1. Estructura selectiva `if`")
+
+    st.markdown("**Ejecutar instrucciones si se cumple una condición**")
+
+    st.code(
+        'edad = 20\n'
+        'if edad >= 18:\n'
+        '    print("Eres mayor de edad")',
+        language="python"
+    )
+
+    st.caption(
+        "Evalúa una condición y ejecuta el bloque de instrucciones "
+        "únicamente si el resultado es True."
+    )
+
+    st.success("Eres mayor de edad")
+
+    st.markdown("""
+    | Elemento | Función |
+    |---|---|
+    | `if` | Inicia la estructura condicional. |
+    | `edad >= 18` | Condición que se evalúa. |
+    | `:` | Indica el inicio del bloque de instrucciones. |
+    | Indentación | Delimita las instrucciones que pertenecen al bloque. |
+    """)
+
+    st.info("""
+    📝 **Nota**
+
+    Si la condición es `False`, el bloque del `if` no se ejecuta.
+    No es obligatorio utilizar `else`.
+    """)
+
+    st.divider()
+
+    st.markdown("### 🔹 2. Estructura selectiva `if-else`")
+
+    st.markdown("**Elegir entre dos alternativas**")
+
+    st.code(
+        'edad = 16\n'
+        'if edad >= 18:\n'
+        '    print("Eres mayor de edad")\n'
+        'else:\n'
+        '    print("Eres menor de edad")',
+        language="python"
+    )
+
+    st.caption(
+        "Evalúa una condición y selecciona uno de dos bloques: "
+        "if cuando es True y else cuando es False."
+    )
+
+    st.success("Eres menor de edad")
+
+    st.markdown("""
+    | Elemento | Función |
+    |---|---|
+    | `if` | Comprueba la condición. |
+    | `else` | Ejecuta el bloque alternativo si la condición es `False`. |
+    """)
+
+    st.info("""
+    📝 **Nota**
+
+    Los bloques `if` y `else` son excluyentes: en una misma ejecución,
+    solo se ejecuta uno de ellos.
+    """)
+
+    st.divider()
+
+    st.markdown("### 🔹 3. Estructura selectiva `if-elif-else`")
+
+    st.markdown("**Evaluar varias condiciones alternativas**")
+
+    st.code(
+        'nota = 15\n'
+        'if nota >= 18:\n'
+        '    print("Excelente")\n'
+        'elif nota >= 14:\n'
+        '    print("Bueno")\n'
+        'elif nota >= 11:\n'
+        '    print("Aprobado")\n'
+        'else:\n'
+        '    print("Desaprobado")',
+        language="python"
+    )
+
+    st.caption(
+        "Permite comprobar varias condiciones en orden. "
+        "Se ejecuta el primer bloque cuya condición sea verdadera."
+    )
+
+    st.success("Bueno")
+
+    st.markdown("""
+    | Elemento | Función |
+    |---|---|
+    | `if` | Evalúa la primera condición. |
+    | `elif` | Comprueba otra condición si las anteriores son falsas. |
+    | `else` | Ejecuta el bloque final si ninguna condición anterior se cumple. |
+    """)
+
+    st.info("""
+    📝 **Nota**
+
+    Puedes utilizar varios bloques `elif`, pero solo un `if` inicial
+    y un `else` final opcional. El orden de las condiciones es importante.
+    """)
+
+    st.divider()
+
+    st.markdown("### 🔹 4. Estructuras selectivas anidadas `if-if`")
+
+    st.markdown("**Evaluar una condición dentro de
