@@ -1343,35 +1343,35 @@ elif opciones == "Condicionales, bucles y funciones":
 
 with st.container(border=True):
 
-    st.markdown("### 🔁 1. Bucle `for`")
-
-    st.markdown("**Repetir instrucciones para cada elemento de una secuencia**")
-
-    st.code(
-        'lenguas = ["quechua", "aimara", "ashaninka"]\n'
-        '\n'
-        'for lengua in lenguas:\n'
-        '    print(lengua)',
-        language="python"
-    )
-
-    st.caption(
-        "El bucle for recorre los elementos de una secuencia "
-        "y ejecuta un bloque de instrucciones para cada uno."
-    )
-
-    st.success("quechua\naimara\nashaninka")
-
-    st.markdown("""
-    | Elemento | Función |
-    |---|---|
-    | `for` | Inicia el bucle. |
-    | `lengua` | Variable que recibe cada elemento. |
-    | `in` | Permite recorrer una secuencia. |
-    | `lenguas` | Secuencia que se recorre. |
-    | `:` | Indica el inicio del bloque. |
-    | Indentación | Delimita las instrucciones que se repiten. |
-    """)
+        st.markdown("### 🔁 1. Bucle `for`")
+    
+        st.markdown("**Repetir instrucciones para cada elemento de una secuencia**")
+    
+        st.code(
+            'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+            '\n'
+            'for lengua in lenguas:\n'
+            '    print(lengua)',
+            language="python"
+        )
+    
+        st.caption(
+            "El bucle for recorre los elementos de una secuencia "
+            "y ejecuta un bloque de instrucciones para cada uno."
+        )
+    
+        st.success("quechua\naimara\nashaninka")
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `for` | Inicia el bucle. |
+        | `lengua` | Variable que recibe cada elemento. |
+        | `in` | Permite recorrer una secuencia. |
+        | `lenguas` | Secuencia que se recorre. |
+        | `:` | Indica el inicio del bloque. |
+        | Indentación | Delimita las instrucciones que se repiten. |
+        """)
 
     st.info("""
     📝 **Nota**
