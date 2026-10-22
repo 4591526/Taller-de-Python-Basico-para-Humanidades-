@@ -1274,7 +1274,7 @@ elif opciones == "Condicionales, bucles y funciones":
     
         st.divider()
     
-         st.markdown("### 🔹 4. Estructuras selectivas anidadas `if-if`")
+        st.markdown("### 🔹 4. Estructuras selectivas anidadas `if-if`")
     
         st.markdown("**Evaluar una condición dentro de otra estructura condicional**")
     
