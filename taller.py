@@ -1382,7 +1382,7 @@ with st.container(border=True):
 
         st.divider()
 
-        st.markdown("### 🔢 Bucle `for` con `range()`")
+        st.markdown("### Bucle `for` con `range()`")
     
         st.markdown("**Repetir instrucciones utilizando una secuencia numérica**")
     
