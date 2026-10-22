@@ -1338,3 +1338,178 @@ elif opciones == "Condicionales, bucles y funciones":
     - Las estructuras selectivas permiten controlar el flujo de ejecución
       de un programa según las condiciones establecidas.
     """)
+
+    st.divider()
+
+with st.container(border=True):
+
+    st.markdown("### 🔁 1. Bucle `for`")
+
+    st.markdown("**Repetir instrucciones para cada elemento de una secuencia**")
+
+    st.code(
+        'lenguas = ["quechua", "aimara", "ashaninka"]\n'
+        '\n'
+        'for lengua in lenguas:\n'
+        '    print(lengua)',
+        language="python"
+    )
+
+    st.caption(
+        "El bucle for recorre los elementos de una secuencia "
+        "y ejecuta un bloque de instrucciones para cada uno."
+    )
+
+    st.success("quechua\naimara\nashaninka")
+
+    st.markdown("""
+    | Elemento | Función |
+    |---|---|
+    | `for` | Inicia el bucle. |
+    | `lengua` | Variable que recibe cada elemento. |
+    | `in` | Permite recorrer una secuencia. |
+    | `lenguas` | Secuencia que se recorre. |
+    | `:` | Indica el inicio del bloque. |
+    | Indentación | Delimita las instrucciones que se repiten. |
+    """)
+
+    st.info("""
+    📝 **Nota**
+
+    El bucle `for` resulta útil cuando se desea recorrer una secuencia
+    de elementos, como una lista, una cadena de texto o un rango numérico.
+    """)
+
+        st.divider()
+
+        st.markdown("### 🔢 2. Bucle `for` con `range()`")
+    
+        st.markdown("**Repetir instrucciones utilizando una secuencia numérica**")
+    
+        st.code(
+            'for numero in range(1, 6):\n'
+            '    print(numero)',
+            language="python"
+        )
+    
+        st.caption(
+            "La función range() genera una secuencia de números "
+            "que permite controlar las iteraciones del bucle."
+        )
+    
+        st.success("1\n2\n3\n4\n5")
+    
+        st.markdown("""
+        | Forma | Funcionamiento |
+        |---|---|
+        | `range(fin)` | Genera números desde 0 hasta `fin - 1`. |
+        | `range(inicio, fin)` | Genera números desde `inicio` hasta `fin - 1`. |
+        | `range(inicio, fin, paso)` | Permite establecer el incremento o decremento. |
+        """)
+
+    st.info("""
+    💡 **Ejemplo**
+
+    `range(1, 6)` genera los números del 1 al 5. El límite final,
+    en este caso 6, no se incluye.
+    """)
+
+        st.divider()
+    
+        st.markdown("### ⛔ 3. Control del bucle: `break` y `continue`")
+    
+        st.markdown("**Modificar el comportamiento de las iteraciones**")
+    
+        st.code(
+            '# Uso de break\n'
+            'for numero in range(1, 6):\n'
+            '    if numero == 3:\n'
+            '        break\n'
+            '    print(numero)\n'
+            '\n'
+            '# Uso de continue\n'
+            'for numero in range(1, 6):\n'
+            '    if numero == 3:\n'
+            '        continue\n'
+            '    print(numero)',
+            language="python"
+        )
+    
+        st.caption(
+            "break termina inmediatamente el bucle; continue omite "
+            "el resto de la iteración actual y pasa a la siguiente."
+        )
+    
+        st.markdown("**Salida del ejemplo con `break`:**")
+        st.success("1\n2")
+    
+        st.markdown("**Salida del ejemplo con `continue`:**")
+        st.success("1\n2\n4\n5")
+    
+        st.markdown("""
+        | Instrucción | Función |
+        |---|---|
+        | `break` | Finaliza el bucle inmediatamente. |
+        | `continue` | Omite la iteración actual y continúa con la siguiente. |
+        """)
+    
+        st.divider()
+    
+        st.markdown("## 2. Bucle `while`")
+    
+        st.markdown("**Repetir instrucciones mientras se cumpla una condición**")
+    
+        st.code(
+            'contador = 1\n'
+            '\n'
+            'while contador <= 5:\n'
+            '    print(contador)\n'
+            '    contador += 1',
+            language="python"
+        )
+    
+        st.caption(
+            "El bucle while evalúa una condición antes de cada iteración. "
+            "Mientras sea verdadera, ejecuta el bloque de instrucciones."
+        )
+    
+        st.success("1\n2\n3\n4\n5")
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `while` | Inicia el bucle condicional. |
+        | `contador <= 5` | Condición que controla la repetición. |
+        | `print(contador)` | Muestra el valor del contador. |
+        | `contador += 1` | Incrementa el contador en una unidad. |
+        """)
+    
+        st.info("""
+        ⚠️ **Nota importante**
+    
+        Es necesario actualizar la variable que controla la condición
+        cuando corresponda. Si la condición permanece verdadera
+        indefinidamente, puede producirse un bucle infinito.
+        """)
+    
+        st.divider()
+    
+        st.markdown("### 🔄 3. Comparación entre `for` y `while`")
+    
+        st.markdown("""
+        | Característica | `for` | `while` |
+        |---|---|---|
+        | Control | Recorre una secuencia o iterable. | Evalúa una condición. |
+        | Uso habitual | Recorrer listas, cadenas o rangos. | Repetir mientras se cumpla una condición. |
+        | Iteraciones | Dependen del iterable y del control del bucle. | Dependen de la condición y de las actualizaciones. |
+        | Riesgo de bucle infinito | Posible en iterables o iteradores sin fin. | Posible si la condición nunca deja de cumplirse. |
+        """)
+
+    st.info("""
+    📝 **Recuerda**
+
+    Ambos bucles permiten repetir instrucciones. Elige `for` cuando
+    necesites recorrer una secuencia y `while` cuando la repetición
+    dependa de una condición.
+    """)
+
