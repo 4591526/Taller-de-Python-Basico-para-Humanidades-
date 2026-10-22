@@ -1407,12 +1407,12 @@ with st.container(border=True):
         | `range(inicio, fin, paso)` | Permite establecer el incremento o decremento. |
         """)
 
-    st.info("""
-    💡 **Ejemplo**
-
-    `range(1, 6)` genera los números del 1 al 5. El límite final,
-    en este caso 6, no se incluye.
-    """)
+        st.info("""
+        💡 **Ejemplo**
+    
+        `range(1, 6)` genera los números del 1 al 5. El límite final,
+        en este caso 6, no se incluye.
+        """)
 
         st.divider()
     
@@ -1505,11 +1505,11 @@ with st.container(border=True):
         | Riesgo de bucle infinito | Posible en iterables o iteradores sin fin. | Posible si la condición nunca deja de cumplirse. |
         """)
 
-    st.info("""
-    📝 **Recuerda**
-
-    Ambos bucles permiten repetir instrucciones. Elige `for` cuando
-    necesites recorrer una secuencia y `while` cuando la repetición
-    dependa de una condición.
-    """)
+        st.info("""
+        📝 **Recuerda**
+    
+        Ambos bucles permiten repetir instrucciones. Elige `for` cuando
+        necesites recorrer una secuencia y `while` cuando la repetición
+        dependa de una condición.
+        """)
 
