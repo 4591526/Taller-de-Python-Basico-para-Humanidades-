@@ -1373,12 +1373,12 @@ with st.container(border=True):
         | Indentación | Delimita las instrucciones que se repiten. |
         """)
 
-    st.info("""
-    📝 **Nota**
-
-    El bucle `for` resulta útil cuando se desea recorrer una secuencia
-    de elementos, como una lista, una cadena de texto o un rango numérico.
-    """)
+        st.info("""
+        📝 **Nota**
+    
+        El bucle `for` resulta útil cuando se desea recorrer una secuencia
+        de elementos, como una lista, una cadena de texto o un rango numérico.
+        """)
 
         st.divider()
 
