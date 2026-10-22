@@ -1343,7 +1343,7 @@ elif opciones == "Condicionales, bucles y funciones":
 
 with st.container(border=True):
 
-        st.markdown("### 🔁 1. Bucle `for`")
+        st.markdown("## Bucle `for`")
     
         st.markdown("**Repetir instrucciones para cada elemento de una secuencia**")
     
@@ -1382,7 +1382,7 @@ with st.container(border=True):
 
         st.divider()
 
-        st.markdown("### 🔢 2. Bucle `for` con `range()`")
+        st.markdown("### 🔢 Bucle `for` con `range()`")
     
         st.markdown("**Repetir instrucciones utilizando una secuencia numérica**")
     
@@ -1416,7 +1416,7 @@ with st.container(border=True):
 
         st.divider()
     
-        st.markdown("### ⛔ 3. Control del bucle: `break` y `continue`")
+        st.markdown("### Instrucciones de control: `break` y `continue`")
     
         st.markdown("**Modificar el comportamiento de las iteraciones**")
     
@@ -1455,7 +1455,7 @@ with st.container(border=True):
     
         st.divider()
     
-        st.markdown("## 2. Bucle `while`")
+        st.markdown("## Bucle `while`")
     
         st.markdown("**Repetir instrucciones mientras se cumpla una condición**")
     
@@ -1494,7 +1494,7 @@ with st.container(border=True):
     
         st.divider()
     
-        st.markdown("### 🔄 3. Comparación entre `for` y `while`")
+        st.markdown("### Comparación entre `for` y `while`")
     
         st.markdown("""
         | Característica | `for` | `while` |
