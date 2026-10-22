@@ -1379,80 +1379,78 @@ with st.container(border=True):
         El bucle `for` resulta útil cuando se desea recorrer una secuencia
         de elementos, como una lista, una cadena de texto o un rango numérico.
         """)
-
-        st.divider()
-
-        st.markdown("### Bucle `for` con `range()`")
+        
+            st.markdown("### Bucle `for` con `range()`")
+        
+            st.markdown("**Repetir instrucciones utilizando una secuencia numérica**")
+        
+            st.code(
+                'for numero in range(1, 6):\n'
+                '    print(numero)',
+                language="python"
+            )
+        
+            st.caption(
+                "La función range() genera una secuencia de números "
+                "que permite controlar las iteraciones del bucle."
+            )
+        
+            st.success("1\n2\n3\n4\n5")
+        
+            st.markdown("""
+            | Forma | Funcionamiento |
+            |---|---|
+            | `range(fin)` | Genera números desde 0 hasta `fin - 1`. |
+            | `range(inicio, fin)` | Genera números desde `inicio` hasta `fin - 1`. |
+            | `range(inicio, fin, paso)` | Permite establecer el incremento o decremento. |
+            """)
     
-        st.markdown("**Repetir instrucciones utilizando una secuencia numérica**")
+            st.info("""
+            💡 **Ejemplo**
+        
+            `range(1, 6)` genera los números del 1 al 5. El límite final,
+            en este caso 6, no se incluye.
+            """)
     
-        st.code(
-            'for numero in range(1, 6):\n'
-            '    print(numero)',
-            language="python"
-        )
-    
-        st.caption(
-            "La función range() genera una secuencia de números "
-            "que permite controlar las iteraciones del bucle."
-        )
-    
-        st.success("1\n2\n3\n4\n5")
-    
-        st.markdown("""
-        | Forma | Funcionamiento |
-        |---|---|
-        | `range(fin)` | Genera números desde 0 hasta `fin - 1`. |
-        | `range(inicio, fin)` | Genera números desde `inicio` hasta `fin - 1`. |
-        | `range(inicio, fin, paso)` | Permite establecer el incremento o decremento. |
-        """)
-
-        st.info("""
-        💡 **Ejemplo**
-    
-        `range(1, 6)` genera los números del 1 al 5. El límite final,
-        en este caso 6, no se incluye.
-        """)
-
-        st.divider()
-    
-        st.markdown("### Instrucciones de control: `break` y `continue`")
-    
-        st.markdown("**Modificar el comportamiento de las iteraciones**")
-    
-        st.code(
-            '# Uso de break\n'
-            'for numero in range(1, 6):\n'
-            '    if numero == 3:\n'
-            '        break\n'
-            '    print(numero)\n'
-            '\n'
-            '# Uso de continue\n'
-            'for numero in range(1, 6):\n'
-            '    if numero == 3:\n'
-            '        continue\n'
-            '    print(numero)',
-            language="python"
-        )
-    
-        st.caption(
-            "break termina inmediatamente el bucle; continue omite "
-            "el resto de la iteración actual y pasa a la siguiente."
-        )
-    
-        st.markdown("**Salida del ejemplo con `break`:**")
-        st.success("1\n2")
-    
-        st.markdown("**Salida del ejemplo con `continue`:**")
-        st.success("1\n2\n4\n5")
-    
-        st.markdown("""
-        | Instrucción | Función |
-        |---|---|
-        | `break` | Finaliza el bucle inmediatamente. |
-        | `continue` | Omite la iteración actual y continúa con la siguiente. |
-        """)
-    
+            st.divider()
+        
+            st.markdown("### Instrucciones de control: `break` y `continue`")
+        
+            st.markdown("**Modificar el comportamiento de las iteraciones**")
+        
+            st.code(
+                '# Uso de break\n'
+                'for numero in range(1, 6):\n'
+                '    if numero == 3:\n'
+                '        break\n'
+                '    print(numero)\n'
+                '\n'
+                '# Uso de continue\n'
+                'for numero in range(1, 6):\n'
+                '    if numero == 3:\n'
+                '        continue\n'
+                '    print(numero)',
+                language="python"
+            )
+        
+            st.caption(
+                "break termina inmediatamente el bucle; continue omite "
+                "el resto de la iteración actual y pasa a la siguiente."
+            )
+        
+            st.markdown("**Salida del ejemplo con `break`:**")
+            st.success("1\n2")
+        
+            st.markdown("**Salida del ejemplo con `continue`:**")
+            st.success("1\n2\n4\n5")
+        
+            st.markdown("""
+            | Instrucción | Función |
+            |---|---|
+            | `break` | Finaliza el bucle inmediatamente. |
+            | `continue` | Omite la iteración actual y continúa con la siguiente. |
+            """)
+        
         st.divider()
     
         st.markdown("## Bucle `while`")
