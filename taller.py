@@ -1161,7 +1161,7 @@ elif opciones == "Condicionales, bucles y funciones":
 
     with st.container(border=True):
 
-        st.markdown("### 🔹 1. Estructura selectiva `if`")
+        st.markdown("### 1. Estructura selectiva `if`")
     
         st.markdown("**Ejecutar instrucciones si se cumple una condición**")
     
@@ -1197,7 +1197,7 @@ elif opciones == "Condicionales, bucles y funciones":
     
         st.divider()
     
-        st.markdown("### 🔹 2. Estructura selectiva `if-else`")
+        st.markdown("### 2. Estructura selectiva `if-else`")
     
         st.markdown("**Elegir entre dos alternativas**")
     
@@ -1233,7 +1233,7 @@ elif opciones == "Condicionales, bucles y funciones":
     
         st.divider()
     
-        st.markdown("### 🔹 3. Estructura selectiva `if-elif-else`")
+        st.markdown("### 3. Estructura selectiva `if-elif-else`")
     
         st.markdown("**Evaluar varias condiciones alternativas**")
     
@@ -1274,7 +1274,7 @@ elif opciones == "Condicionales, bucles y funciones":
     
         st.divider()
     
-        st.markdown("### 🔹 4. Estructuras selectivas anidadas `if-if`")
+        st.markdown("### 4. Estructuras selectivas anidadas `if-if`")
     
         st.markdown("**Evaluar una condición dentro de otra estructura condicional**")
     
