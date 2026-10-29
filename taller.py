@@ -1707,7 +1707,7 @@ else:
         "palabra": 8,
         "texto": 4
         }
-        nube = WordCloud(width=400,height=200,background_color="white").generate_from_frequencies(frecuencias)
+        nube = WordCloud(width=500,height=250,background_color="white").generate_from_frequencies(frecuencias)
         fig, ax = plt.subplots(figsize=(8, 8))
         ax.imshow(nube)
         ax.axis("off")
