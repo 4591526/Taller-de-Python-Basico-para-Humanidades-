@@ -1667,3 +1667,66 @@ else:
     """)
 
     st.divider()
+
+    with st.container(border=True):
+
+        st.markdown("## Nubes de palabras con `WordCloud`")
+    
+        st.markdown("**Representar visualmente la frecuencia de las palabras**")
+    
+        st.code(
+            'from wordcloud import WordCloud\n'
+            'import matplotlib.pyplot as plt\n'
+            '\n'
+            'frecuencias = {\n'
+            '    "lengua": 10,\n'
+            '    "habla": 7,\n'
+            '    "gramática": 5,\n'
+            '    "palabra": 8,\n'
+            '    "texto": 4\n'
+            '}\n'
+            '\n'
+            'nube = WordCloud(\n'
+            '    width=800,\n'
+            '    height=400,\n'
+            '    background_color="white"\n'
+            ').generate_from_frequencies(frecuencias)\n'
+            '\n'
+            'plt.imshow(nube, interpolation="bilinear")\n'
+            'plt.axis("off")\n'
+            'plt.show()',
+            language="python"
+        )
+    
+        st.caption(
+            "La biblioteca WordCloud genera una representación visual "
+            "en la que el tamaño de las palabras depende de sus frecuencias. "
+            "El método generate_from_frequencies() recibe un diccionario "
+            "con las palabras y sus respectivos valores."
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `from wordcloud import WordCloud` | Importa la clase WordCloud. |
+        | `import matplotlib.pyplot as plt` | Importa las herramientas para mostrar el gráfico. |
+        | `frecuencias` | Diccionario con palabras y sus frecuencias. |
+        | `WordCloud()` | Configura las dimensiones y el fondo de la nube. |
+        | `generate_from_frequencies(frecuencias)` | Genera la nube a partir de las frecuencias proporcionadas. |
+        | `plt.imshow()` | Muestra la imagen generada. |
+        | `plt.axis("off")` | Oculta los ejes del gráfico. |
+        | `plt.show()` | Presenta la visualización. |
+        """)
+
+    st.info("""
+    ⚠️ **Nota importante**
+
+    Si trabajas en Google Colab, instala previamente la biblioteca
+    con `!pip install wordcloud`.
+
+    Las frecuencias deben estar representadas mediante valores
+    numéricos positivos. Una palabra con mayor frecuencia suele
+    aparecer con un tamaño mayor en la nube.
+    """)
+
+    st.divider()
