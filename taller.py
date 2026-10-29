@@ -11,14 +11,14 @@ st.set_page_config(
     layout="wide"
 )
 
-opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas, listas y operadores", "Condicionales, bucles y funciones", "Librerias"]
+opciones_menu  = ["Introducción", "Primeros pasos en Python", "Cadenas, listas y operadores", "Condicionales, bucles y funciones", "Bibliotecas"]
 
 opciones = option_menu(
     menu_title=None,
     options=opciones_menu,
     icons=['0-circle','1-circle', '2-circle', '3-circle', '4-circle'],
     menu_icon="cast",
-    default_index=2,
+    default_index=4,
     orientation="horizontal"
 )
 
@@ -120,7 +120,7 @@ if opciones == "Introducción":
     1. **Primeros pasos en Python**
     2. **Cadenas, listas y operadores**
     3. **Condicionales, bucles y funciones**
-    4. **Librerías**
+    4. **Bibliotecas: random, WordCloud, spaCy, pandas y Matplotlib**
     """)
 
     st.divider()
@@ -1341,7 +1341,7 @@ elif opciones == "Condicionales, bucles y funciones":
 
     st.divider()
 
-with st.container(border=True):
+    with st.container(border=True):
 
         st.markdown("## Bucle `for`")
     
@@ -1510,3 +1510,15 @@ with st.container(border=True):
         dependa de una condición.
         """)
 
+else:
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Bibliotecas</h2>', unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.link_button(
+            "📓 Colab - Clase 4",
+            "https://colab.research.google.com/drive/1hdtjOicT18q5RPZj8tmK-OWtbBPw0e-e#scrollTo=yrj7KP2I7cx5",
+            use_container_width=True
+        )
+    
+    st.divider() ## Separador
