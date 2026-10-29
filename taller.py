@@ -1891,3 +1891,56 @@ else:
 
     st.divider()
 
+    with st.container(border=True):
+
+        st.markdown("## Biblioteca `pandas`")
+    
+        st.markdown("**Organizar y analizar datos mediante tablas**")
+    
+        st.code(
+            'import pandas as pd\n'
+            '\n'
+            'datos = {\n'
+            '    "lengua": ["Quechua", "Aimara", "Ashaninka", "Shipibo"],\n'
+            '    "hablantes": [500, 300, 150, 80]\n'
+            '}\n'
+            '\n'
+            'df = pd.DataFrame(datos)\n'
+            '\n'
+            'print(df)',
+            language="python"
+        )
+    
+        st.caption(
+            "Pandas permite organizar, transformar y analizar datos. "
+            "La función DataFrame() convierte un diccionario en una tabla "
+            "compuesta por filas y columnas."
+        )
+    
+        st.success(
+            "      lengua  hablantes\n"
+            "0    Quechua        500\n"
+            "1     Aimara        300\n"
+            "2  Ashaninka        150\n"
+            "3    Shipibo         80"
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `import pandas as pd` | Importa pandas con el alias `pd`. |
+        | `datos` | Diccionario que contiene los datos. |
+        | `pd.DataFrame(datos)` | Crea una tabla a partir del diccionario. |
+        | `df` | Variable que almacena el DataFrame. |
+        | `print(df)` | Muestra la tabla en pantalla. |
+        """)
+
+    st.info("""
+    💡 **Aplicación en lingüística**
+
+    Pandas permite organizar datos sobre lenguas, frecuencias léxicas,
+    categorías gramaticales y resultados de análisis de corpus.
+    """)
+
+    st.divider()
+
