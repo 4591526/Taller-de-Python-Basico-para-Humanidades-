@@ -1699,6 +1699,8 @@ else:
             'plt.show()',
             language="python"
         )
+
+        st.pyplot(fig)
     
         st.caption(
             "La biblioteca WordCloud genera una representación visual "
