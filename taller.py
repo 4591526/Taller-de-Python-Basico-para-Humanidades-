@@ -1765,16 +1765,6 @@ else:
             "sintácticas."
         )
     
-        st.success(
-            "La     DET\n"
-            "lingüística     NOUN\n"
-            "estudia     VERB\n"
-            "las     DET\n"
-            "lenguas     NOUN\n"
-            "humanas     ADJ\n"
-            ".     PUNCT"
-        )
-    
         st.markdown("""
         | Elemento | Función |
         |---|---|
@@ -1917,14 +1907,6 @@ else:
             "compuesta por filas y columnas."
         )
     
-        st.success(
-            "      lengua  hablantes\n"
-            "0    Quechua        500\n"
-            "1     Aimara        300\n"
-            "2  Ashaninka        150\n"
-            "3    Shipibo         80"
-        )
-    
         st.markdown("""
         | Elemento | Función |
         |---|---|
@@ -1940,6 +1922,119 @@ else:
 
     Pandas permite organizar datos sobre lenguas, frecuencias léxicas,
     categorías gramaticales y resultados de análisis de corpus.
+    """)
+
+    st.divider()
+
+    with st.container(border=True):
+
+        st.markdown("## Gráfico circular con `Matplotlib`")
+    
+        st.markdown("**Representar las proporciones de un conjunto**")
+    
+        st.code(
+            'import matplotlib.pyplot as plt\n'
+            '\n'
+            'categorias = ["Sustantivos", "Verbos", "Adjetivos", "Adverbios"]\n'
+            'frecuencias = [40, 25, 20, 15]\n'
+            '\n'
+            'fig, ax = plt.subplots(figsize=(7, 7))\n'
+            '\n'
+            'ax.pie(\n'
+            '    frecuencias,\n'
+            '    labels=categorias,\n'
+            '    autopct="%1.1f%%",\n'
+            '    startangle=90\n'
+            ')\n'
+            '\n'
+            'ax.set_title("Proporción por categoría gramatical")\n'
+            'ax.axis("equal")\n'
+            '\n'
+            'st.pyplot(fig)\n'
+            'plt.close(fig)',
+            language="python"
+        )
+    
+        st.caption(
+            "Un gráfico circular representa cómo se distribuye un total "
+            "entre diferentes categorías. Cada sector corresponde a una "
+            "proporción del conjunto."
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `ax.pie()` | Crea el gráfico circular. |
+        | `labels=categorias` | Muestra el nombre de cada categoría. |
+        | `autopct="%1.1f%%"` | Muestra los porcentajes con un decimal. |
+        | `startangle=90` | Define el ángulo inicial del gráfico. |
+        | `ax.set_title()` | Añade el título. |
+        | `ax.axis("equal")` | Mantiene una proporción circular. |
+        | `st.pyplot(fig)` | Muestra el gráfico en Streamlit. |
+        """)
+
+    st.info("""
+    ⚠️ **Nota importante**
+
+    Los valores representan partes de un total y no tienen que
+    convertirse previamente en porcentajes: `pie()` calcula las
+    proporciones automáticamente. Este gráfico suele ser más claro
+    cuando se comparan pocas categorías.
+    """)
+
+    st.divider()
+
+    with st.container(border=True):
+
+        st.markdown("## Gráfico de barras con `Matplotlib`")
+    
+        st.markdown("**Comparar frecuencias o cantidades entre categorías**")
+    
+        st.code(
+            'import matplotlib.pyplot as plt\n'
+            '\n'
+            'categorias = ["Sustantivos", "Verbos", "Adjetivos", "Adverbios"]\n'
+            'frecuencias = [40, 25, 20, 15]\n'
+            '\n'
+            'fig, ax = plt.subplots(figsize=(8, 5))\n'
+            '\n'
+            'ax.bar(categorias, frecuencias)\n'
+            'ax.set_title("Frecuencia por categoría gramatical")\n'
+            'ax.set_xlabel("Categoría")\n'
+            'ax.set_ylabel("Frecuencia")\n'
+            '\n'
+            'plt.xticks(rotation=30)\n'
+            'fig.tight_layout()\n'
+            'st.pyplot(fig)\n'
+            'plt.close(fig)',
+            language="python"
+        )
+    
+        st.caption(
+            "Un gráfico de barras permite comparar valores entre distintas "
+            "categorías. La altura de cada barra representa la frecuencia "
+            "o cantidad correspondiente."
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `plt.subplots()` | Crea la figura y el área del gráfico. |
+        | `ax.bar()` | Genera las barras verticales. |
+        | `ax.set_title()` | Añade el título del gráfico. |
+        | `ax.set_xlabel()` | Etiqueta el eje horizontal. |
+        | `ax.set_ylabel()` | Etiqueta el eje vertical. |
+        | `plt.xticks(rotation=30)` | Gira las etiquetas del eje horizontal. |
+        | `fig.tight_layout()` | Ajusta los espacios del gráfico. |
+        | `st.pyplot(fig)` | Muestra el gráfico en Streamlit. |
+        """)
+
+    st.info("""
+    ⚠️ **Nota importante**
+
+    Las categorías y sus frecuencias deben corresponder entre sí.
+    Si las etiquetas son largas, puedes utilizar `ax.barh()` para
+    crear barras horizontales.
     """)
 
     st.divider()
