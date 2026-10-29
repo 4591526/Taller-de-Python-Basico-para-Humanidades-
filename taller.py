@@ -1694,7 +1694,7 @@ else:
             '    background_color="white"\n'
             ').generate_from_frequencies(frecuencias)\n'
             '\n'
-            'plt.imshow(nube, interpolation="bilinear")\n'
+            'plt.imshow(nube)\n'
             'plt.axis("off")\n'
             'plt.show()',
             language="python"
@@ -1708,9 +1708,8 @@ else:
         "texto": 4
         }
         nube = WordCloud(width=800,height=400,background_color="white").generate_from_frequencies(frecuencias)
-        fig, ax = plt.subplots()
-        ax.figure(figsize=(8,8))
-        ax.imshow(nube, interpolation="bilinear")
+        fig, ax = plt.subplots(figsize=(8, 8))
+        ax.imshow(nube)
         ax.axis("off")
         st.pyplot(fig)
     
