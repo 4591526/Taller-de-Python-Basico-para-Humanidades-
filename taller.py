@@ -1522,3 +1522,48 @@ else:
         )
     
     st.divider() ## Separador
+
+    with st.container(border=True):
+
+        st.markdown("## Biblioteca `random`")
+    
+        st.markdown("**Seleccionar un elemento al azar de una secuencia**")
+    
+        st.code(
+            'import random\n'
+            '\n'
+            'frutas = ["manzana", "pera", "uva", "naranja"]\n'
+            '\n'
+            'fruta_elegida = random.choice(frutas)\n'
+            '\n'
+            'print(fruta_elegida)',
+            language="python"
+        )
+    
+        st.caption(
+            "La biblioteca random permite realizar operaciones relacionadas "
+            "con la aleatoriedad. La función random.choice() selecciona "
+            "un elemento al azar de una secuencia, como una lista o una tupla."
+        )
+    
+        st.success("Ejemplo de salida: uva")
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `import random` | Importa la biblioteca random. |
+        | `frutas` | Lista de elementos entre los que se realizará la selección. |
+        | `random.choice(frutas)` | Selecciona un elemento al azar de la lista. |
+        | `fruta_elegida` | Variable que almacena el elemento seleccionado. |
+        | `print(fruta_elegida)` | Muestra el elemento seleccionado. |
+        """)
+
+    st.info("""
+    ⚠️ **Nota importante**
+
+    La función `random.choice()` selecciona un solo elemento de una
+    secuencia no vacía. El resultado puede cambiar en cada ejecución,
+    por lo que no se puede predecir qué elemento será seleccionado.
+    """)
+
+    st.divider()
