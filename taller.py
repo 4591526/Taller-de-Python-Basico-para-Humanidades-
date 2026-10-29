@@ -1738,4 +1738,61 @@ else:
 
     st.divider()
 
+    with st.container(border=True):
+
+        st.markdown("## Procesamiento de texto con `spaCy`")
+    
+        st.markdown("**Analizar textos mediante herramientas de procesamiento del lenguaje natural**")
+    
+        st.code(
+            'import spacy\n'
+            '\n'
+            'nlp = spacy.load("es_core_news_sm")\n'
+            '\n'
+            'texto = "La lingüística estudia las lenguas humanas."\n'
+            '\n'
+            'doc = nlp(texto)\n'
+            '\n'
+            'for token in doc:\n'
+            '    print(token.text, token.pos_)',
+            language="python"
+        )
+    
+        st.caption(
+            "spaCy es una biblioteca de Python para el procesamiento del "
+            "lenguaje natural (PLN). Permite analizar textos e identificar "
+            "unidades lingüísticas, categorías gramaticales y relaciones "
+            "sintácticas."
+        )
+    
+        st.success(
+            "La     DET\n"
+            "lingüística     NOUN\n"
+            "estudia     VERB\n"
+            "las     DET\n"
+            "lenguas     NOUN\n"
+            "humanas     ADJ\n"
+            ".     PUNCT"
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `import spacy` | Importa la biblioteca spaCy. |
+        | `spacy.load()` | Carga un modelo de lenguaje previamente instalado. |
+        | `nlp(texto)` | Procesa el texto mediante el modelo. |
+        | `doc` | Objeto que contiene el texto procesado. |
+        | `token.text` | Obtiene el texto de cada token. |
+        | `token.pos_` | Obtiene la categoría gramatical del token. |
+        """)
+
+    st.info("""
+    ⚠️ **Nota importante**
+
+    Para analizar textos en español, debes instalar el modelo
+    `es_core_news_sm` además de la biblioteca spaCy.
+    """)
+
+    st.divider()
+
 
