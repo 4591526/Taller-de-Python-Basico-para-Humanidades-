@@ -1617,3 +1617,53 @@ else:
     """)
 
     st.divider()
+
+    with st.container(border=True):
+
+        st.markdown("## Ejemplo: Frecuencia de palabras")
+    
+        st.markdown("**Almacenar la frecuencia de cada palabra**")
+    
+        st.code(
+            'frecuencias = {\n'
+            '    "lengua": 5,\n'
+            '    "habla": 3,\n'
+            '    "gramática": 7\n'
+            '}\n'
+            '\n'
+            'print(frecuencias["gramática"])\n'
+            'print(frecuencias.keys())\n'
+            'print(frecuencias.values())',
+            language="python"
+        )
+    
+        st.caption(
+            "Los diccionarios también permiten representar frecuencias. "
+            "En este ejemplo, cada palabra es una clave y su frecuencia "
+            "es el valor asociado."
+        )
+    
+        st.success(
+            "7\n"
+            "dict_keys(['lengua', 'habla', 'gramática'])\n"
+            "dict_values([5, 3, 7])"
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `frecuencias` | Diccionario con palabras y frecuencias. |
+        | `frecuencias["gramática"]` | Obtiene la frecuencia de una palabra. |
+        | `.keys()` | Devuelve las claves del diccionario. |
+        | `.values()` | Devuelve los valores del diccionario. |
+        """)
+
+    st.info("""
+    💡 **Aplicación en lingüística**
+
+    Los diccionarios permiten organizar frecuencias léxicas,
+    registrar conteos de palabras y representar resultados
+    de un análisis textual.
+    """)
+
+    st.divider()
