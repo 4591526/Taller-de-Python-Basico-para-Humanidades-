@@ -1795,4 +1795,51 @@ else:
 
     st.divider()
 
+    with st.container(border=True):
+
+        st.markdown("## Segmentación de oraciones")
+    
+        st.markdown("**Dividir un texto y organizar las oraciones en un diccionario**")
+    
+        st.code(
+            'sin_salto = quijote.replace("\\\\n", "")\n'
+            '\n'
+            'oraciones = sin_salto.split(".")\n'
+            '\n'
+            'oraciones_texto = {}\n'
+            '\n'
+            'for i, oracion in enumerate(oraciones, start=1):\n'
+            '    oraciones_texto[i] = oracion.strip()\n'
+            '\n'
+            'print(oraciones_texto)',
+            language="python"
+        )
+    
+        st.caption(
+            "El método replace() elimina los saltos de línea, split() divide "
+            "el texto utilizando el punto como separador y enumerate() "
+            "permite asignar un número a cada oración."
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `replace()` | Reemplaza los saltos de línea por cadenas vacías. |
+        | `split(".")` | Divide el texto cada vez que encuentra un punto. |
+        | `{}` | Crea un diccionario vacío. |
+        | `enumerate(oraciones, start=1)` | Recorre las oraciones con índices desde 1. |
+        | `oraciones_texto[i] = oracion.strip()` | Almacena cada oración bajo una clave numérica y elimina espacios externos. |
+        """)
+
+    st.info("""
+    💡 **Nota lingüística**
+
+    Dividir mediante `split(".")` es un procedimiento sencillo, pero
+    puede generar segmentos incorrectos ante abreviaturas, puntos
+    suspensivos o signos de puntuación adicionales. Para una
+    segmentación más robusta, puedes utilizar las herramientas
+    de spaCy para detectar oraciones.
+    """)
+
+    st.divider()
 
