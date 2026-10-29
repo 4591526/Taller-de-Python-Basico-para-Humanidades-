@@ -1711,7 +1711,10 @@ else:
         fig, ax = plt.subplots(figsize=(8, 8))
         ax.imshow(nube)
         ax.axis("off")
-        st.pyplot(fig)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.pyplot(fig)
     
         st.caption(
             "La biblioteca WordCloud genera una representación visual "
