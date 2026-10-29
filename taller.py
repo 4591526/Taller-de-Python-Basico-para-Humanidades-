@@ -1802,7 +1802,7 @@ else:
         st.markdown("**Dividir un texto y organizar las oraciones en un diccionario**")
     
         st.code(
-            'sin_salto = quijote.replace("\\\\n", "")\n'
+            'sin_salto = quijote.replace("\\n", "")\n'
             '\n'
             'oraciones = sin_salto.split(".")\n'
             '\n'
