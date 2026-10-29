@@ -1843,3 +1843,51 @@ else:
 
     st.divider()
 
+    with st.container(border=True):
+
+        st.markdown("## Tabla de análisis lingüístico")
+    
+        st.markdown("**Organizar la información morfosintáctica de cada token**")
+    
+        st.code(
+            'filas = []\n'
+            '\n'
+            'for token in oracion_1:\n'
+            '    filas.append({\n'
+            '        "token": token.text,\n'
+            '        "POS": token.pos_,\n'
+            '        "cabeza": token.head.text,\n'
+            '        "dependencia": token.dep_\n'
+            '    })\n'
+            '\n'
+            'tabla_oracion1 = pd.DataFrame(filas)\n'
+            '\n'
+            'st.dataframe(tabla_oracion1, use_container_width=True)',
+            language="python"
+        )
+    
+        st.caption(
+            "El código recorre los tokens de la oración, almacena sus "
+            "propiedades en una lista de diccionarios y convierte esa "
+            "lista en un DataFrame para organizar los resultados."
+        )
+    
+        st.markdown("""
+        | Columna | Información |
+        |---|---|
+        | `token` | Palabra o signo de puntuación identificado. |
+        | `POS` | Categoría gramatical asignada por el modelo. |
+        | `cabeza` | Token del que depende sintácticamente el elemento analizado. |
+        | `dependencia` | Etiqueta de la relación sintáctica. |
+        """)
+
+    st.info("""
+    💡 **Aplicación en lingüística**
+
+    Esta tabla permite examinar la categorización gramatical y las
+    relaciones sintácticas identificadas automáticamente. Los
+    resultados dependen del modelo y pueden requerir revisión manual.
+    """)
+
+    st.divider()
+
