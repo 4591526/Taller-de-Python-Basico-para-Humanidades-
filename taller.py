@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit_monaco import st_monaco
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 import pandas as pd
 import graphviz
 import random
@@ -1718,15 +1720,6 @@ else:
         | `plt.show()` | Presenta la visualización. |
         """)
 
-    st.info("""
-    ⚠️ **Nota importante**
-
-    Si trabajas en Google Colab, instala previamente la biblioteca
-    con `!pip install wordcloud`.
-
-    Las frecuencias deben estar representadas mediante valores
-    numéricos positivos. Una palabra con mayor frecuencia suele
-    aparecer con un tamaño mayor en la nube.
-    """)
-
     st.divider()
+
+
