@@ -1567,3 +1567,53 @@ else:
     """)
 
     st.divider()
+
+    with st.container(border=True):
+
+        st.markdown("## Diccionarios en Python")
+    
+        st.markdown("**Almacenar información mediante pares clave-valor**")
+    
+        st.code(
+            'estudiante = {\n'
+            '    "nombre": "Ana",\n'
+            '    "edad": 20,\n'
+            '    "carrera": "Lingüística"\n'
+            '}\n'
+            '\n'
+            'print(estudiante)\n'
+            'print(estudiante["nombre"])',
+            language="python"
+        )
+    
+        st.caption(
+            "Un diccionario es una estructura de datos que almacena "
+            "información mediante pares de clave y valor. Las claves "
+            "permiten acceder a los valores asociados."
+        )
+    
+        st.success(
+            "{'nombre': 'Ana', 'edad': 20, 'carrera': 'Lingüística'}\n"
+            "Ana"
+        )
+    
+        st.markdown("""
+        | Elemento | Función |
+        |---|---|
+        | `estudiante` | Variable que almacena el diccionario. |
+        | `{}` | Delimita los elementos del diccionario. |
+        | `"nombre"` | Clave que identifica un dato. |
+        | `"Ana"` | Valor asociado a la clave `"nombre"`. |
+        | `estudiante["nombre"]` | Accede al valor asociado a la clave `"nombre"`. |
+        | `print()` | Muestra la información en pantalla. |
+        """)
+
+    st.info("""
+    ⚠️ **Nota importante**
+
+    Cada elemento de un diccionario se organiza como `clave: valor`.
+    Las claves deben ser únicas y permiten recuperar los valores
+    correspondientes.
+    """)
+
+    st.divider()
