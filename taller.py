@@ -1700,6 +1700,17 @@ else:
             language="python"
         )
 
+        frecuencias = {
+        "lengua": 10,
+        "habla": 7,
+        "gramática": 5,
+        "palabra": 8,
+        "texto": 4
+        }
+        nube = WordCloud(width=800,height=400,background_color="white").generate_from_frequencies(frecuencias)
+        fig, ax = plt.subplots()
+        ax.imshow(nube, interpolation="bilinear")
+        ax.axis("off")
         st.pyplot(fig)
     
         st.caption(
